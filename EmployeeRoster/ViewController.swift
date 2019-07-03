@@ -7,12 +7,22 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class ViewController: UIViewController {
 
+    private let disposeBag = DisposeBag()
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        GetEmployeeInfoHandler().request()
+            .subscribe(onSuccess: { result in
+                 
+            }, onError: { error in
+                
+            })
+        .disposed(by: disposeBag)
     }
 
 

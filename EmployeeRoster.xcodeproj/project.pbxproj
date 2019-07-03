@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -18,6 +18,18 @@
 		AF1B09A022CC956E00C5EC90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF1B099E22CC956E00C5EC90 /* LaunchScreen.storyboard */; };
 		AF1B09AB22CC956E00C5EC90 /* EmployeeRosterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B09AA22CC956E00C5EC90 /* EmployeeRosterTests.swift */; };
 		AF1B09B622CC956E00C5EC90 /* EmployeeRosterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B09B522CC956E00C5EC90 /* EmployeeRosterUITests.swift */; };
+		AF1B09C522CC981800C5EC90 /* GetEmployeeInfoHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B09C422CC981800C5EC90 /* GetEmployeeInfoHandler.swift */; };
+		AF1B09C922CC987100C5EC90 /* WebServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B09C822CC987100C5EC90 /* WebServiceProtocol.swift */; };
+		AF1B09CB22CC988300C5EC90 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B09CA22CC988300C5EC90 /* WebService.swift */; };
+		AF1B09CD22CC98BF00C5EC90 /* GetEmployeeInfoHandlerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B09CC22CC98BF00C5EC90 /* GetEmployeeInfoHandlerProtocol.swift */; };
+		AFC3E6AF22CCA445005A8829 /* EmployeeRosterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC3E6AE22CCA445005A8829 /* EmployeeRosterVC.swift */; };
+		AFC3E6B122CCA45A005A8829 /* EmployeeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC3E6B022CCA45A005A8829 /* EmployeeViewModel.swift */; };
+		AFC3E6B322CCAD1F005A8829 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC3E6B222CCAD1F005A8829 /* Result.swift */; };
+		AFC3E6B622CCAD7A005A8829 /* ErrorResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC3E6B522CCAD7A005A8829 /* ErrorResult.swift */; };
+		AFC3E6BA22CCB2F7005A8829 /* RosterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC3E6B922CCB2F7005A8829 /* RosterModel.swift */; };
+		AFC3E6BC22CCB318005A8829 /* ScheduleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC3E6BB22CCB318005A8829 /* ScheduleModel.swift */; };
+		AFC3E6BE22CCB34A005A8829 /* EmployeeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC3E6BD22CCB34A005A8829 /* EmployeeModel.swift */; };
+		AFC3E6C022CCBDD4005A8829 /* EmployeeViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC3E6BF22CCBDD4005A8829 /* EmployeeViewModelProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +72,18 @@
 		AF1B09B122CC956E00C5EC90 /* EmployeeRosterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EmployeeRosterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF1B09B522CC956E00C5EC90 /* EmployeeRosterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeRosterUITests.swift; sourceTree = "<group>"; };
 		AF1B09B722CC956E00C5EC90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AF1B09C422CC981800C5EC90 /* GetEmployeeInfoHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetEmployeeInfoHandler.swift; sourceTree = "<group>"; };
+		AF1B09C822CC987100C5EC90 /* WebServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceProtocol.swift; sourceTree = "<group>"; };
+		AF1B09CA22CC988300C5EC90 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		AF1B09CC22CC98BF00C5EC90 /* GetEmployeeInfoHandlerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetEmployeeInfoHandlerProtocol.swift; sourceTree = "<group>"; };
+		AFC3E6AE22CCA445005A8829 /* EmployeeRosterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeRosterVC.swift; sourceTree = "<group>"; };
+		AFC3E6B022CCA45A005A8829 /* EmployeeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeViewModel.swift; sourceTree = "<group>"; };
+		AFC3E6B222CCAD1F005A8829 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		AFC3E6B522CCAD7A005A8829 /* ErrorResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResult.swift; sourceTree = "<group>"; };
+		AFC3E6B922CCB2F7005A8829 /* RosterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosterModel.swift; sourceTree = "<group>"; };
+		AFC3E6BB22CCB318005A8829 /* ScheduleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleModel.swift; sourceTree = "<group>"; };
+		AFC3E6BD22CCB34A005A8829 /* EmployeeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeModel.swift; sourceTree = "<group>"; };
+		AFC3E6BF22CCBDD4005A8829 /* EmployeeViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeViewModelProtocol.swift; sourceTree = "<group>"; };
 		E10E2C90F94CECE929E91EA4 /* Pods_EmployeeRoster.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmployeeRoster.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -126,6 +150,10 @@
 		AF1B099122CC956D00C5EC90 /* EmployeeRoster */ = {
 			isa = PBXGroup;
 			children = (
+				AFC3E6AC22CCA3EE005A8829 /* Model */,
+				AFC3E6AB22CCA3E7005A8829 /* ViewModel */,
+				AFC3E6AD22CCA3F4005A8829 /* View */,
+				AF1B09C622CC985300C5EC90 /* Service */,
 				AF1B099222CC956D00C5EC90 /* AppDelegate.swift */,
 				AF1B099422CC956D00C5EC90 /* ViewController.swift */,
 				AF1B099622CC956D00C5EC90 /* Main.storyboard */,
@@ -155,6 +183,70 @@
 			path = EmployeeRosterUITests;
 			sourceTree = "<group>";
 		};
+		AF1B09C322CC97EB00C5EC90 /* APIHandler */ = {
+			isa = PBXGroup;
+			children = (
+				AF1B09CC22CC98BF00C5EC90 /* GetEmployeeInfoHandlerProtocol.swift */,
+				AF1B09C422CC981800C5EC90 /* GetEmployeeInfoHandler.swift */,
+			);
+			path = APIHandler;
+			sourceTree = "<group>";
+		};
+		AF1B09C622CC985300C5EC90 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				AFC3E6B422CCAD66005A8829 /* Result */,
+				AF1B09C722CC985F00C5EC90 /* WebService */,
+				AF1B09C322CC97EB00C5EC90 /* APIHandler */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		AF1B09C722CC985F00C5EC90 /* WebService */ = {
+			isa = PBXGroup;
+			children = (
+				AF1B09C822CC987100C5EC90 /* WebServiceProtocol.swift */,
+				AF1B09CA22CC988300C5EC90 /* WebService.swift */,
+			);
+			path = WebService;
+			sourceTree = "<group>";
+		};
+		AFC3E6AB22CCA3E7005A8829 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				AFC3E6BF22CCBDD4005A8829 /* EmployeeViewModelProtocol.swift */,
+				AFC3E6B022CCA45A005A8829 /* EmployeeViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		AFC3E6AC22CCA3EE005A8829 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AFC3E6BD22CCB34A005A8829 /* EmployeeModel.swift */,
+				AFC3E6BB22CCB318005A8829 /* ScheduleModel.swift */,
+				AFC3E6B922CCB2F7005A8829 /* RosterModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AFC3E6AD22CCA3F4005A8829 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				AFC3E6AE22CCA445005A8829 /* EmployeeRosterVC.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		AFC3E6B422CCAD66005A8829 /* Result */ = {
+			isa = PBXGroup;
+			children = (
+				AFC3E6B222CCAD1F005A8829 /* Result.swift */,
+				AFC3E6B522CCAD7A005A8829 /* ErrorResult.swift */,
+			);
+			path = Result;
+			sourceTree = "<group>";
+		};
 		D07C0B252A69B67D07917D43 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -165,7 +257,6 @@
 				73B5E33942EEEF48B91ABFAF /* Pods-EmployeeRosterUITests.debug.xcconfig */,
 				A71DCB1334F1EDB1B6D396FE /* Pods-EmployeeRosterUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -390,9 +481,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF1B09CB22CC988300C5EC90 /* WebService.swift in Sources */,
+				AFC3E6AF22CCA445005A8829 /* EmployeeRosterVC.swift in Sources */,
+				AFC3E6BC22CCB318005A8829 /* ScheduleModel.swift in Sources */,
 				AF1B099B22CC956D00C5EC90 /* EmployeeRoster.xcdatamodeld in Sources */,
+				AF1B09C922CC987100C5EC90 /* WebServiceProtocol.swift in Sources */,
+				AFC3E6BA22CCB2F7005A8829 /* RosterModel.swift in Sources */,
+				AFC3E6B622CCAD7A005A8829 /* ErrorResult.swift in Sources */,
+				AFC3E6BE22CCB34A005A8829 /* EmployeeModel.swift in Sources */,
+				AFC3E6B122CCA45A005A8829 /* EmployeeViewModel.swift in Sources */,
+				AF1B09C522CC981800C5EC90 /* GetEmployeeInfoHandler.swift in Sources */,
+				AFC3E6B322CCAD1F005A8829 /* Result.swift in Sources */,
 				AF1B099522CC956D00C5EC90 /* ViewController.swift in Sources */,
 				AF1B099322CC956D00C5EC90 /* AppDelegate.swift in Sources */,
+				AFC3E6C022CCBDD4005A8829 /* EmployeeViewModelProtocol.swift in Sources */,
+				AF1B09CD22CC98BF00C5EC90 /* GetEmployeeInfoHandlerProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
