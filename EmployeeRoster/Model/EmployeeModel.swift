@@ -12,7 +12,7 @@ struct EmployeeModel: Codable {
     let tenant: String?
     let motd: String?
     let scheduled_today: ScheduleModel?
-    let roster:[RosterModel]?
+    let roster: [RosterModel]?
 }
 
 extension EmployeeModel {

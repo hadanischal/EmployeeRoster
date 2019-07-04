@@ -17,14 +17,12 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         GetEmployeeInfoHandler().request()
-            .subscribe(onSuccess: { result in
-                 
-            }, onError: { error in
-                
+            .subscribe(onSuccess: { _ in
+
+            }, onError: { _ in
+
             })
         .disposed(by: disposeBag)
     }
 
-
 }
-

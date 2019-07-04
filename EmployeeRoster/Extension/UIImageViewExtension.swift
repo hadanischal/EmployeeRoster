@@ -20,6 +20,6 @@ extension UIImageView {
             .subscribe(onNext: { response in
                 self.image = UIImage(data: response.1)
             }).disposed(by: disposeBag)
-        
+
     }
 }

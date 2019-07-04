@@ -20,7 +20,7 @@ class WebService: WebServiceProtocol {
     }
     func request(with resource: Resource) -> Single<Data> {
         print("url:", resource.url)
-        print("response:", resource.parameters)
+        print("response:", resource.parameters ?? "nil")
 
         return Single<Data>.create { single in
             Alamofire.request(resource.url, method: .get, parameters: resource.parameters)
