@@ -24,12 +24,17 @@
 		AF1B09CD22CC98BF00C5EC90 /* GetEmployeeInfoHandlerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B09CC22CC98BF00C5EC90 /* GetEmployeeInfoHandlerProtocol.swift */; };
 		AFC3E6AF22CCA445005A8829 /* EmployeeRosterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC3E6AE22CCA445005A8829 /* EmployeeRosterVC.swift */; };
 		AFC3E6B122CCA45A005A8829 /* EmployeeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC3E6B022CCA45A005A8829 /* EmployeeViewModel.swift */; };
-		AFC3E6B322CCAD1F005A8829 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC3E6B222CCAD1F005A8829 /* Result.swift */; };
-		AFC3E6B622CCAD7A005A8829 /* ErrorResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC3E6B522CCAD7A005A8829 /* ErrorResult.swift */; };
 		AFC3E6BA22CCB2F7005A8829 /* RosterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC3E6B922CCB2F7005A8829 /* RosterModel.swift */; };
 		AFC3E6BC22CCB318005A8829 /* ScheduleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC3E6BB22CCB318005A8829 /* ScheduleModel.swift */; };
 		AFC3E6BE22CCB34A005A8829 /* EmployeeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC3E6BD22CCB34A005A8829 /* EmployeeModel.swift */; };
 		AFC3E6C022CCBDD4005A8829 /* EmployeeViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC3E6BF22CCBDD4005A8829 /* EmployeeViewModelProtocol.swift */; };
+		AFC3E6C322CCD3BF005A8829 /* RosterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC3E6C222CCD3BF005A8829 /* RosterTableViewCell.swift */; };
+		AFC3E6C522CCD3D7005A8829 /* EmployeeListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC3E6C422CCD3D7005A8829 /* EmployeeListCell.swift */; };
+		AFC3E6C822CCD4A1005A8829 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC3E6C722CCD4A1005A8829 /* ActivityIndicator.swift */; };
+		AFC3E6CB22CCD51C005A8829 /* ThemeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC3E6CA22CCD51C005A8829 /* ThemeColor.swift */; };
+		AFC3E6D022CCDF34005A8829 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = AFC3E6CF22CCDF34005A8829 /* .swiftlint.yml */; };
+		AFC3E6D222CCE0FD005A8829 /* EmployeeDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC3E6D122CCE0FD005A8829 /* EmployeeDetailCell.swift */; };
+		AFC3E6D522CCE700005A8829 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC3E6D422CCE700005A8829 /* UIImageViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,12 +83,17 @@
 		AF1B09CC22CC98BF00C5EC90 /* GetEmployeeInfoHandlerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetEmployeeInfoHandlerProtocol.swift; sourceTree = "<group>"; };
 		AFC3E6AE22CCA445005A8829 /* EmployeeRosterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeRosterVC.swift; sourceTree = "<group>"; };
 		AFC3E6B022CCA45A005A8829 /* EmployeeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeViewModel.swift; sourceTree = "<group>"; };
-		AFC3E6B222CCAD1F005A8829 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
-		AFC3E6B522CCAD7A005A8829 /* ErrorResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResult.swift; sourceTree = "<group>"; };
 		AFC3E6B922CCB2F7005A8829 /* RosterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosterModel.swift; sourceTree = "<group>"; };
 		AFC3E6BB22CCB318005A8829 /* ScheduleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleModel.swift; sourceTree = "<group>"; };
 		AFC3E6BD22CCB34A005A8829 /* EmployeeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeModel.swift; sourceTree = "<group>"; };
 		AFC3E6BF22CCBDD4005A8829 /* EmployeeViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeViewModelProtocol.swift; sourceTree = "<group>"; };
+		AFC3E6C222CCD3BF005A8829 /* RosterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosterTableViewCell.swift; sourceTree = "<group>"; };
+		AFC3E6C422CCD3D7005A8829 /* EmployeeListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListCell.swift; sourceTree = "<group>"; };
+		AFC3E6C722CCD4A1005A8829 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		AFC3E6CA22CCD51C005A8829 /* ThemeColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeColor.swift; sourceTree = "<group>"; };
+		AFC3E6CF22CCDF34005A8829 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
+		AFC3E6D122CCE0FD005A8829 /* EmployeeDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDetailCell.swift; sourceTree = "<group>"; };
+		AFC3E6D422CCE700005A8829 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
 		E10E2C90F94CECE929E91EA4 /* Pods_EmployeeRoster.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmployeeRoster.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -128,6 +138,7 @@
 		AF1B098622CC956D00C5EC90 = {
 			isa = PBXGroup;
 			children = (
+				AFC3E6CF22CCDF34005A8829 /* .swiftlint.yml */,
 				AF1B099122CC956D00C5EC90 /* EmployeeRoster */,
 				AF1B09A922CC956E00C5EC90 /* EmployeeRosterTests */,
 				AF1B09B422CC956E00C5EC90 /* EmployeeRosterUITests */,
@@ -150,8 +161,12 @@
 		AF1B099122CC956D00C5EC90 /* EmployeeRoster */ = {
 			isa = PBXGroup;
 			children = (
+				AFC3E6D322CCE6B7005A8829 /* Extension */,
+				AFC3E6C922CCD504005A8829 /* Constants */,
+				AFC3E6C622CCD488005A8829 /* Helper */,
 				AFC3E6AC22CCA3EE005A8829 /* Model */,
 				AFC3E6AB22CCA3E7005A8829 /* ViewModel */,
+				AFC3E6C122CCD3A2005A8829 /* TableViewCell */,
 				AFC3E6AD22CCA3F4005A8829 /* View */,
 				AF1B09C622CC985300C5EC90 /* Service */,
 				AF1B099222CC956D00C5EC90 /* AppDelegate.swift */,
@@ -195,7 +210,6 @@
 		AF1B09C622CC985300C5EC90 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				AFC3E6B422CCAD66005A8829 /* Result */,
 				AF1B09C722CC985F00C5EC90 /* WebService */,
 				AF1B09C322CC97EB00C5EC90 /* APIHandler */,
 			);
@@ -238,13 +252,38 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		AFC3E6B422CCAD66005A8829 /* Result */ = {
+		AFC3E6C122CCD3A2005A8829 /* TableViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				AFC3E6B222CCAD1F005A8829 /* Result.swift */,
-				AFC3E6B522CCAD7A005A8829 /* ErrorResult.swift */,
+				AFC3E6C222CCD3BF005A8829 /* RosterTableViewCell.swift */,
+				AFC3E6C422CCD3D7005A8829 /* EmployeeListCell.swift */,
+				AFC3E6D122CCE0FD005A8829 /* EmployeeDetailCell.swift */,
 			);
-			path = Result;
+			path = TableViewCell;
+			sourceTree = "<group>";
+		};
+		AFC3E6C622CCD488005A8829 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				AFC3E6C722CCD4A1005A8829 /* ActivityIndicator.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		AFC3E6C922CCD504005A8829 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				AFC3E6CA22CCD51C005A8829 /* ThemeColor.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		AFC3E6D322CCE6B7005A8829 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				AFC3E6D422CCE700005A8829 /* UIImageViewExtension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		D07C0B252A69B67D07917D43 /* Pods */ = {
@@ -368,6 +407,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFC3E6D022CCDF34005A8829 /* .swiftlint.yml in Resources */,
 				AF1B09A022CC956E00C5EC90 /* LaunchScreen.storyboard in Resources */,
 				AF1B099D22CC956E00C5EC90 /* Assets.xcassets in Resources */,
 				AF1B099822CC956D00C5EC90 /* Main.storyboard in Resources */,
@@ -487,14 +527,18 @@
 				AF1B099B22CC956D00C5EC90 /* EmployeeRoster.xcdatamodeld in Sources */,
 				AF1B09C922CC987100C5EC90 /* WebServiceProtocol.swift in Sources */,
 				AFC3E6BA22CCB2F7005A8829 /* RosterModel.swift in Sources */,
-				AFC3E6B622CCAD7A005A8829 /* ErrorResult.swift in Sources */,
+				AFC3E6D522CCE700005A8829 /* UIImageViewExtension.swift in Sources */,
+				AFC3E6C322CCD3BF005A8829 /* RosterTableViewCell.swift in Sources */,
 				AFC3E6BE22CCB34A005A8829 /* EmployeeModel.swift in Sources */,
 				AFC3E6B122CCA45A005A8829 /* EmployeeViewModel.swift in Sources */,
+				AFC3E6C522CCD3D7005A8829 /* EmployeeListCell.swift in Sources */,
 				AF1B09C522CC981800C5EC90 /* GetEmployeeInfoHandler.swift in Sources */,
-				AFC3E6B322CCAD1F005A8829 /* Result.swift in Sources */,
 				AF1B099522CC956D00C5EC90 /* ViewController.swift in Sources */,
 				AF1B099322CC956D00C5EC90 /* AppDelegate.swift in Sources */,
 				AFC3E6C022CCBDD4005A8829 /* EmployeeViewModelProtocol.swift in Sources */,
+				AFC3E6CB22CCD51C005A8829 /* ThemeColor.swift in Sources */,
+				AFC3E6D222CCE0FD005A8829 /* EmployeeDetailCell.swift in Sources */,
+				AFC3E6C822CCD4A1005A8829 /* ActivityIndicator.swift in Sources */,
 				AF1B09CD22CC98BF00C5EC90 /* GetEmployeeInfoHandlerProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
