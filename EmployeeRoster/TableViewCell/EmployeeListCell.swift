@@ -9,16 +9,17 @@
 import UIKit
 
 class EmployeeListCell: UITableViewCell {
+    @IBOutlet var titleLabel: UILabel?
+    @IBOutlet var detailLabel: UILabel?
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    var dataValue: RosterModel? {
+        didSet {
+            guard let data = dataValue else {
+                return
+            }
+            titleLabel?.text = data.name
+            detailLabel?.text = data.from_date
+        }
     }
 
 }
