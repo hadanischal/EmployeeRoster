@@ -9,5 +9,5 @@
 import RxSwift
 
 protocol GetEmployeeInfoHandlerProtocol {
-    func request() -> Single<EmployeeModel>
+    func request() -> Observable<EmployeeModel>
 }
