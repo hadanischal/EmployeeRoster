@@ -22,6 +22,7 @@
 		AF1B09C922CC987100C5EC90 /* WebServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B09C822CC987100C5EC90 /* WebServiceProtocol.swift */; };
 		AF1B09CB22CC988300C5EC90 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B09CA22CC988300C5EC90 /* WebService.swift */; };
 		AF1B09CD22CC98BF00C5EC90 /* GetEmployeeInfoHandlerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B09CC22CC98BF00C5EC90 /* GetEmployeeInfoHandlerProtocol.swift */; };
+		AF89D35E22CF626E003BC462 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF89D35D22CF626E003BC462 /* UIColorExtension.swift */; };
 		AFC3E6AF22CCA445005A8829 /* EmployeeRosterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC3E6AE22CCA445005A8829 /* EmployeeRosterVC.swift */; };
 		AFC3E6B122CCA45A005A8829 /* EmployeeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC3E6B022CCA45A005A8829 /* EmployeeViewModel.swift */; };
 		AFC3E6BA22CCB2F7005A8829 /* RosterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC3E6B922CCB2F7005A8829 /* RosterModel.swift */; };
@@ -81,6 +82,7 @@
 		AF1B09C822CC987100C5EC90 /* WebServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceProtocol.swift; sourceTree = "<group>"; };
 		AF1B09CA22CC988300C5EC90 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		AF1B09CC22CC98BF00C5EC90 /* GetEmployeeInfoHandlerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetEmployeeInfoHandlerProtocol.swift; sourceTree = "<group>"; };
+		AF89D35D22CF626E003BC462 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		AFC3E6AE22CCA445005A8829 /* EmployeeRosterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeRosterVC.swift; sourceTree = "<group>"; };
 		AFC3E6B022CCA45A005A8829 /* EmployeeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeViewModel.swift; sourceTree = "<group>"; };
 		AFC3E6B922CCB2F7005A8829 /* RosterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosterModel.swift; sourceTree = "<group>"; };
@@ -282,6 +284,7 @@
 			isa = PBXGroup;
 			children = (
 				AFC3E6D422CCE700005A8829 /* UIImageViewExtension.swift */,
+				AF89D35D22CF626E003BC462 /* UIColorExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -528,6 +531,7 @@
 				AF1B09C922CC987100C5EC90 /* WebServiceProtocol.swift in Sources */,
 				AFC3E6BA22CCB2F7005A8829 /* RosterModel.swift in Sources */,
 				AFC3E6D522CCE700005A8829 /* UIImageViewExtension.swift in Sources */,
+				AF89D35E22CF626E003BC462 /* UIColorExtension.swift in Sources */,
 				AFC3E6C322CCD3BF005A8829 /* RosterTableViewCell.swift in Sources */,
 				AFC3E6BE22CCB34A005A8829 /* EmployeeModel.swift in Sources */,
 				AFC3E6B122CCA45A005A8829 /* EmployeeViewModel.swift in Sources */,

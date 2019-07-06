@@ -30,13 +30,13 @@ class EmployeeRosterVC: UIViewController {
 
     func setupUI() {
         self.navigationItem.title = "Roster"
-        navigationItem.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
-        self.view.backgroundColor = ThemeColor.white
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+        self.view.backgroundColor = UIColor.white
     }
 
     func setupTableView() {
-        self.tableView?.backgroundColor = ThemeColor.tableViewBackgroundColor
-        self.view.backgroundColor = ThemeColor.tableViewBackgroundColor
+        self.tableView?.backgroundColor = UIColor.tableViewBackgroundColor
+        self.view.backgroundColor = UIColor.tableViewBackgroundColor
         self.tableView?.tableFooterView = UIView(frame: CGRect.zero)
     }
 
