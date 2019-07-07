@@ -16,13 +16,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        GetEmployeeInfoHandler().request()
-            .subscribe(onSuccess: { _ in
-
-            }, onError: { _ in
-
-            })
-        .disposed(by: disposeBag)
     }
 
 }

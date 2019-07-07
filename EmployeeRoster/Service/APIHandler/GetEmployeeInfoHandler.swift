@@ -18,13 +18,13 @@ class GetEmployeeInfoHandler: GetEmployeeInfoHandlerProtocol {
         self.webService = webService
     }
 
-    func request() -> Single<EmployeeModel> {
+    func request() -> Observable<EmployeeModel> {
         let resource = Resource(url: URL(string: url)!, parameters: nil)
         return self.webService.request(with: resource)
             .map { data -> EmployeeModel in
                 let decoder = JSONDecoder()
                 let result = try decoder.decode(EmployeeModel.self, from: data)
                 return result
-            }
+            }.asObservable()
     }
 }

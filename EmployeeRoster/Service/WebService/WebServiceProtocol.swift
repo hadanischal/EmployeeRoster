@@ -9,5 +9,5 @@
 import RxSwift
 
 protocol WebServiceProtocol {
-    func request(with resource: Resource) -> Single<Data>
+    func request(with resource: Resource) -> Observable<Data>
 }

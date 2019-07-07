@@ -37,12 +37,11 @@ class EmployeeViewModel: EmployeeViewModelProtocol {
     func getRosterInfo() {
         self.getEmployeeHandler.request()
             .retry(3)
-            .catchError({ error -> Single<EmployeeModel> in
-                print(error.localizedDescription)
-                return Single.just(EmployeeModel.empty)
-            })
-            .catchErrorJustReturn(EmployeeModel.empty)
-            .subscribe(onSuccess: { [weak self] result in
+//            .catchError({ error -> Observable<EmployeeModel> in
+//                print(error.localizedDescription)
+//                return Observable.just(EmployeeModel.empty)
+//            })
+            .subscribe(onNext: { [weak self] result in
                 self?.employeeResultSubject.on(.next(result))
                 }, onError: { [weak self] error in
                     print("VM error :", error)

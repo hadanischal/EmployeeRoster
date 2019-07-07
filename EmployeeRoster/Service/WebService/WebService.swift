@@ -18,20 +18,21 @@ struct Resource {
 class WebService: WebServiceProtocol {
     init() {
     }
-    func request(with resource: Resource) -> Single<Data> {
+    func request(with resource: Resource) -> Observable<Data> {
         print("url:", resource.url)
-        print("response:", resource.parameters ?? "nil")
+        print("parameters:", resource.parameters ?? "[:]")
 
-        return Single<Data>.create { single in
+        return Observable<Data>.create { observer in
             Alamofire.request(resource.url, method: .get, parameters: resource.parameters)
                 .validate()
                 .responseData(completionHandler: { response in
                     print("response:", response)
                     switch response.result {
                     case .success(let value):
-                        single(.success(value))
+                        observer.on(.next(value))
+                        observer.on(.completed)
                     case .failure(let error):
-                        single(.error(error))
+                        observer.on(.error(error))
                     }
                 })
             return Disposables.create ()
