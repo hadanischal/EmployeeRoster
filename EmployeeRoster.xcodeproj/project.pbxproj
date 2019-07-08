@@ -10,6 +10,7 @@
 		221BAC8A917539156B432BE5 /* Pods_EmployeeRosterTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92F8AFB9E85A1A40857DFB7A /* Pods_EmployeeRosterTests.framework */; };
 		5C8A22A50C1223F5240D6115 /* Pods_EmployeeRoster.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E10E2C90F94CECE929E91EA4 /* Pods_EmployeeRoster.framework */; };
 		6302423317141A6E46F29AA1 /* Pods_EmployeeRosterUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70E75E62A9749F2432767340 /* Pods_EmployeeRosterUITests.framework */; };
+		AF1A481122D4056900436A29 /* EmployeeViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1A481022D4056900436A29 /* EmployeeViewModelTests.swift */; };
 		AF1B099322CC956D00C5EC90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B099222CC956D00C5EC90 /* AppDelegate.swift */; };
 		AF1B099522CC956D00C5EC90 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1B099422CC956D00C5EC90 /* ViewController.swift */; };
 		AF1B099822CC956D00C5EC90 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF1B099622CC956D00C5EC90 /* Main.storyboard */; };
@@ -69,6 +70,7 @@
 		92F8AFB9E85A1A40857DFB7A /* Pods_EmployeeRosterTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EmployeeRosterTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3DFB27D207C73995483DC74 /* Pods-EmployeeRosterTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmployeeRosterTests.debug.xcconfig"; path = "Target Support Files/Pods-EmployeeRosterTests/Pods-EmployeeRosterTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A71DCB1334F1EDB1B6D396FE /* Pods-EmployeeRosterUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmployeeRosterUITests.release.xcconfig"; path = "Target Support Files/Pods-EmployeeRosterUITests/Pods-EmployeeRosterUITests.release.xcconfig"; sourceTree = "<group>"; };
+		AF1A481022D4056900436A29 /* EmployeeViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeViewModelTests.swift; sourceTree = "<group>"; };
 		AF1B098F22CC956D00C5EC90 /* EmployeeRoster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EmployeeRoster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF1B099222CC956D00C5EC90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF1B099422CC956D00C5EC90 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -202,6 +204,7 @@
 				AF25A28C22D36AC0001183F9 /* MockData.swift */,
 				AF25A28822D3693E001183F9 /* MaterializedSequenceResult.swift */,
 				AFFD7BC622D1C2BB0075A006 /* GetEmployeeInfoHandlerTests.swift */,
+				AF1A481022D4056900436A29 /* EmployeeViewModelTests.swift */,
 				AF1B09AA22CC956E00C5EC90 /* EmployeeRosterTests.swift */,
 				AF1B09AC22CC956E00C5EC90 /* Info.plist */,
 			);
@@ -597,6 +600,7 @@
 			files = (
 				AF25A28922D3693E001183F9 /* MaterializedSequenceResult.swift in Sources */,
 				AFFD7BC722D1C2BB0075A006 /* GetEmployeeInfoHandlerTests.swift in Sources */,
+				AF1A481122D4056900436A29 /* EmployeeViewModelTests.swift in Sources */,
 				AF1B09AB22CC956E00C5EC90 /* EmployeeRosterTests.swift in Sources */,
 				AFFD7BC522D1C2440075A006 /* GeneratedMocks.swift in Sources */,
 				AF25A28D22D36AC0001183F9 /* MockData.swift in Sources */,
