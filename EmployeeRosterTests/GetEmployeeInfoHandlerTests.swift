@@ -17,11 +17,11 @@ import RxSwift
 @testable import EmployeeRoster
 
 class GetEmployeeInfoHandlerTests: QuickSpec {
-    
+
     override func spec() {
         var testRequest: GetEmployeeInfoHandler!
         var mockWebService: MockWebServiceProtocol!
-        
+
         describe("GetEmployeeInfoHandlerTests") {
             beforeEach {
                 mockWebService = MockWebServiceProtocol()
@@ -30,9 +30,9 @@ class GetEmployeeInfoHandlerTests: QuickSpec {
                 })
                 testRequest = GetEmployeeInfoHandler(withWebService: mockWebService)
             }
-            
+
             describe("Get Employee Info from server", {
-                
+
                 context("when server request succeed ", {
                     var result: MaterializedSequenceResult<EmployeeModel>?
                     beforeEach {
@@ -45,7 +45,7 @@ class GetEmployeeInfoHandlerTests: QuickSpec {
                         result?.assertSequenceCompletes()
                     })
                 })
-                
+
                 context("when server request failed ", {
                     var result: MaterializedSequenceResult<EmployeeModel>?
                     beforeEach {
@@ -59,7 +59,7 @@ class GetEmployeeInfoHandlerTests: QuickSpec {
                     })
                 })
             })
-            
+
         }
     }
 }
