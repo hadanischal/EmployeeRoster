@@ -32,6 +32,11 @@ class RosterTableViewCell: UITableViewCell {
         nameLabel?.textColor = UIColor.white
         startDateLabel?.textColor = UIColor.white
         endDateLabel?.textColor = UIColor.white
+        
+        nameLabel?.font = .heading1
+        startDateLabel?.font = .body1
+        endDateLabel?.font = .body2
+
         self.photoImageView?.contentMode =   UIView.ContentMode.scaleAspectFill
     }
 }

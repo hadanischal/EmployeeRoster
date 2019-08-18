@@ -21,5 +21,11 @@ class EmployeeListCell: UITableViewCell {
             detailLabel?.text = data.from_date
         }
     }
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        titleLabel?.font = .body1
+        detailLabel?.font = .body2
+    }
 
 }

@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0407F32623084190001E66A0 /* GothamRounded-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0407F32323084190001E66A0 /* GothamRounded-Medium.otf */; };
+		0407F32723084190001E66A0 /* GothamRounded-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0407F32423084190001E66A0 /* GothamRounded-Bold.otf */; };
+		0407F32823084190001E66A0 /* GothamRounded-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0407F32523084190001E66A0 /* GothamRounded-Light.otf */; };
+		0407F32A230841ED001E66A0 /* ColourExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0407F329230841ED001E66A0 /* ColourExtension.swift */; };
+		04D1C9AA230965C3006FD8F7 /* FontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D1C9A9230965C3006FD8F7 /* FontExtension.swift */; };
+		04D1C9AC23096764006FD8F7 /* NavigationControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D1C9AB23096764006FD8F7 /* NavigationControllerExtension.swift */; };
 		221BAC8A917539156B432BE5 /* Pods_EmployeeRosterTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92F8AFB9E85A1A40857DFB7A /* Pods_EmployeeRosterTests.framework */; };
 		5C8A22A50C1223F5240D6115 /* Pods_EmployeeRoster.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E10E2C90F94CECE929E91EA4 /* Pods_EmployeeRoster.framework */; };
 		6302423317141A6E46F29AA1 /* Pods_EmployeeRosterUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70E75E62A9749F2432767340 /* Pods_EmployeeRosterUITests.framework */; };
@@ -26,7 +32,6 @@
 		AF25A28922D3693E001183F9 /* MaterializedSequenceResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF25A28822D3693E001183F9 /* MaterializedSequenceResult.swift */; };
 		AF25A28B22D36A3E001183F9 /* employee.json in Resources */ = {isa = PBXBuildFile; fileRef = AF25A28A22D36A3E001183F9 /* employee.json */; };
 		AF25A28D22D36AC0001183F9 /* MockData.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF25A28C22D36AC0001183F9 /* MockData.swift */; };
-		AF89D35E22CF626E003BC462 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF89D35D22CF626E003BC462 /* UIColorExtension.swift */; };
 		AFC3E6AF22CCA445005A8829 /* EmployeeRosterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC3E6AE22CCA445005A8829 /* EmployeeRosterVC.swift */; };
 		AFC3E6B122CCA45A005A8829 /* EmployeeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC3E6B022CCA45A005A8829 /* EmployeeViewModel.swift */; };
 		AFC3E6BA22CCB2F7005A8829 /* RosterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC3E6B922CCB2F7005A8829 /* RosterModel.swift */; };
@@ -62,6 +67,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0407F32323084190001E66A0 /* GothamRounded-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GothamRounded-Medium.otf"; sourceTree = "<group>"; };
+		0407F32423084190001E66A0 /* GothamRounded-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GothamRounded-Bold.otf"; sourceTree = "<group>"; };
+		0407F32523084190001E66A0 /* GothamRounded-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GothamRounded-Light.otf"; sourceTree = "<group>"; };
+		0407F329230841ED001E66A0 /* ColourExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColourExtension.swift; sourceTree = "<group>"; };
+		04D1C9A9230965C3006FD8F7 /* FontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontExtension.swift; sourceTree = "<group>"; };
+		04D1C9AB23096764006FD8F7 /* NavigationControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerExtension.swift; sourceTree = "<group>"; };
 		0718CCDE6143713203A9D7B8 /* Pods-EmployeeRosterTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmployeeRosterTests.release.xcconfig"; path = "Target Support Files/Pods-EmployeeRosterTests/Pods-EmployeeRosterTests.release.xcconfig"; sourceTree = "<group>"; };
 		4BF38923BD0CEC33E0435252 /* Pods-EmployeeRoster.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmployeeRoster.debug.xcconfig"; path = "Target Support Files/Pods-EmployeeRoster/Pods-EmployeeRoster.debug.xcconfig"; sourceTree = "<group>"; };
 		54DB1A68239D1D777C11D304 /* Pods-EmployeeRoster.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmployeeRoster.release.xcconfig"; path = "Target Support Files/Pods-EmployeeRoster/Pods-EmployeeRoster.release.xcconfig"; sourceTree = "<group>"; };
@@ -92,7 +103,6 @@
 		AF25A28822D3693E001183F9 /* MaterializedSequenceResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaterializedSequenceResult.swift; sourceTree = "<group>"; };
 		AF25A28A22D36A3E001183F9 /* employee.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = employee.json; sourceTree = "<group>"; };
 		AF25A28C22D36AC0001183F9 /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
-		AF89D35D22CF626E003BC462 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		AFC3E6AE22CCA445005A8829 /* EmployeeRosterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeRosterVC.swift; sourceTree = "<group>"; };
 		AFC3E6B022CCA45A005A8829 /* EmployeeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeViewModel.swift; sourceTree = "<group>"; };
 		AFC3E6B922CCB2F7005A8829 /* RosterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosterModel.swift; sourceTree = "<group>"; };
@@ -140,6 +150,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0407F32123084180001E66A0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				0407F32223084190001E66A0 /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		0407F32223084190001E66A0 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				0407F32323084190001E66A0 /* GothamRounded-Medium.otf */,
+				0407F32423084190001E66A0 /* GothamRounded-Bold.otf */,
+				0407F32523084190001E66A0 /* GothamRounded-Light.otf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		315346FCC84884FD337D36C4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -177,6 +205,7 @@
 		AF1B099122CC956D00C5EC90 /* EmployeeRoster */ = {
 			isa = PBXGroup;
 			children = (
+				0407F32123084180001E66A0 /* Resources */,
 				AFC3E6D322CCE6B7005A8829 /* Extension */,
 				AFC3E6C922CCD504005A8829 /* Constants */,
 				AFC3E6C622CCD488005A8829 /* Helper */,
@@ -304,7 +333,9 @@
 			isa = PBXGroup;
 			children = (
 				AFC3E6D422CCE700005A8829 /* UIImageViewExtension.swift */,
-				AF89D35D22CF626E003BC462 /* UIColorExtension.swift */,
+				0407F329230841ED001E66A0 /* ColourExtension.swift */,
+				04D1C9A9230965C3006FD8F7 /* FontExtension.swift */,
+				04D1C9AB23096764006FD8F7 /* NavigationControllerExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -439,7 +470,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0407F32623084190001E66A0 /* GothamRounded-Medium.otf in Resources */,
 				AFC3E6D022CCDF34005A8829 /* .swiftlint.yml in Resources */,
+				0407F32723084190001E66A0 /* GothamRounded-Bold.otf in Resources */,
+				0407F32823084190001E66A0 /* GothamRounded-Light.otf in Resources */,
 				AF1B09A022CC956E00C5EC90 /* LaunchScreen.storyboard in Resources */,
 				AF1B099D22CC956E00C5EC90 /* Assets.xcassets in Resources */,
 				AF1B099822CC956D00C5EC90 /* Main.storyboard in Resources */,
@@ -575,11 +609,12 @@
 				AFC3E6AF22CCA445005A8829 /* EmployeeRosterVC.swift in Sources */,
 				AFC3E6BC22CCB318005A8829 /* ScheduleModel.swift in Sources */,
 				AF1B099B22CC956D00C5EC90 /* EmployeeRoster.xcdatamodeld in Sources */,
+				0407F32A230841ED001E66A0 /* ColourExtension.swift in Sources */,
 				AF1B09C922CC987100C5EC90 /* WebServiceProtocol.swift in Sources */,
 				AFC3E6BA22CCB2F7005A8829 /* RosterModel.swift in Sources */,
 				AFC3E6D522CCE700005A8829 /* UIImageViewExtension.swift in Sources */,
-				AF89D35E22CF626E003BC462 /* UIColorExtension.swift in Sources */,
 				AFC3E6C322CCD3BF005A8829 /* RosterTableViewCell.swift in Sources */,
+				04D1C9AA230965C3006FD8F7 /* FontExtension.swift in Sources */,
 				AFC3E6BE22CCB34A005A8829 /* EmployeeModel.swift in Sources */,
 				AFC3E6B122CCA45A005A8829 /* EmployeeViewModel.swift in Sources */,
 				AFC3E6C522CCD3D7005A8829 /* EmployeeListCell.swift in Sources */,
@@ -591,6 +626,7 @@
 				AFC3E6D222CCE0FD005A8829 /* EmployeeDetailCell.swift in Sources */,
 				AFC3E6C822CCD4A1005A8829 /* ActivityIndicator.swift in Sources */,
 				AF1B09CD22CC98BF00C5EC90 /* GetEmployeeInfoHandlerProtocol.swift in Sources */,
+				04D1C9AC23096764006FD8F7 /* NavigationControllerExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
