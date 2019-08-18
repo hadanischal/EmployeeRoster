@@ -9,9 +9,6 @@
 import UIKit
 
 extension UIColor {
-    static var primary: UIColor {
-        return UIColor(hex: "#40c5eeff") ?? UIColor.gray //UIColor(hex: "#40C5EE")!
-    }
 
     static var primaryLight: UIColor {
         return UIColor(red: 163/255, green: 209/255, blue: 218/255, alpha: 1)
@@ -43,9 +40,5 @@ extension UIColor {
 
     static var contentViewBackgroundColor: UIColor {
         return UIColor(red: 0.918, green: 0.910, blue: 0.918, alpha: 1.00)
-    }
-
-    static var viewBackgroundColor: UIColor {
-        return UIColor(red: 0.933, green: 0.941, blue: 0.945, alpha: 1.00)
     }
 }

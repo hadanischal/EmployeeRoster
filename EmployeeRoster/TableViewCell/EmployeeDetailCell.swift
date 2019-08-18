@@ -30,6 +30,9 @@ class EmployeeDetailCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
+        nameLabel?.font = .body1
+        startDateLabel?.font = .body2
+        endDateLabel?.font = .body2
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
