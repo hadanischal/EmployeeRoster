@@ -6,7 +6,6 @@
 //  Copyright © 2019 NischalHada. All rights reserved.
 //
 
-
 import UIKit
 
 extension UIFont {
@@ -46,5 +45,5 @@ extension UIFont {
     static var detailBody: UIFont {
         return .regularFont(size: 24)
     }
-    
+
 }

@@ -22,8 +22,8 @@ class EmployeeDetailCell: UITableViewCell {
                 return
             }
             nameLabel?.text = data.name
-            startDateLabel?.text = "Start Date: \(data.from_date ?? "")"
-            endDateLabel?.text = "End date:\(data.to_date ?? "")"
+            startDateLabel?.text = "Start Date: \(data.fromDate ?? "")"
+            endDateLabel?.text = "End date:\(data.toDate ?? "")"
             profileImage?.imageFromUrl(urlString: imageUrl)
         }
     }

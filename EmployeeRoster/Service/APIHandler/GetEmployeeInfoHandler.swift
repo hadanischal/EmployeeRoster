@@ -23,6 +23,7 @@ class GetEmployeeInfoHandler: GetEmployeeInfoHandlerProtocol {
         return self.webService.request(with: resource)
             .map { data -> EmployeeModel in
                 let decoder = JSONDecoder()
+                decoder.keyDecodingStrategy = .convertFromSnakeCase
                 let result = try decoder.decode(EmployeeModel.self, from: data)
                 return result
             }.asObservable()

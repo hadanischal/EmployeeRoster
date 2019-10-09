@@ -6,9 +6,9 @@
 //  Copyright © 2019 NischalHada. All rights reserved.
 //
 
-
 import UIKit
 
+// swiftlint:disable all
 extension UIColor {
     static var primary: UIColor {
 //        return UIColor(rgb: 0x40c5eeff)

@@ -18,10 +18,10 @@ class EmployeeListCell: UITableViewCell {
                 return
             }
             titleLabel?.text = data.name
-            detailLabel?.text = data.from_date
+            detailLabel?.text = data.fromDate
         }
     }
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         titleLabel?.font = .body1
