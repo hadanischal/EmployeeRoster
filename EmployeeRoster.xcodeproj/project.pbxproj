@@ -11,8 +11,12 @@
 		0407F32723084190001E66A0 /* GothamRounded-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0407F32423084190001E66A0 /* GothamRounded-Bold.otf */; };
 		0407F32823084190001E66A0 /* GothamRounded-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0407F32523084190001E66A0 /* GothamRounded-Light.otf */; };
 		0407F32A230841ED001E66A0 /* ColourExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0407F329230841ED001E66A0 /* ColourExtension.swift */; };
+		0448C9782349B36C0082369E /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0448C9772349B36C0082369E /* RealmManager.swift */; };
 		04D1C9AA230965C3006FD8F7 /* FontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D1C9A9230965C3006FD8F7 /* FontExtension.swift */; };
 		04D1C9AC23096764006FD8F7 /* NavigationControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D1C9AB23096764006FD8F7 /* NavigationControllerExtension.swift */; };
+		04F0B40D234C360F003819B7 /* RealmEmployee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F0B40C234C360F003819B7 /* RealmEmployee.swift */; };
+		04F0B40F234C3662003819B7 /* RealmSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F0B40E234C3662003819B7 /* RealmSchedule.swift */; };
+		04F0B411234C366F003819B7 /* RealmRoster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F0B410234C366F003819B7 /* RealmRoster.swift */; };
 		221BAC8A917539156B432BE5 /* Pods_EmployeeRosterTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92F8AFB9E85A1A40857DFB7A /* Pods_EmployeeRosterTests.framework */; };
 		5C8A22A50C1223F5240D6115 /* Pods_EmployeeRoster.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E10E2C90F94CECE929E91EA4 /* Pods_EmployeeRoster.framework */; };
 		6302423317141A6E46F29AA1 /* Pods_EmployeeRosterUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70E75E62A9749F2432767340 /* Pods_EmployeeRosterUITests.framework */; };
@@ -71,8 +75,12 @@
 		0407F32423084190001E66A0 /* GothamRounded-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GothamRounded-Bold.otf"; sourceTree = "<group>"; };
 		0407F32523084190001E66A0 /* GothamRounded-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GothamRounded-Light.otf"; sourceTree = "<group>"; };
 		0407F329230841ED001E66A0 /* ColourExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColourExtension.swift; sourceTree = "<group>"; };
+		0448C9772349B36C0082369E /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		04D1C9A9230965C3006FD8F7 /* FontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontExtension.swift; sourceTree = "<group>"; };
 		04D1C9AB23096764006FD8F7 /* NavigationControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerExtension.swift; sourceTree = "<group>"; };
+		04F0B40C234C360F003819B7 /* RealmEmployee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmEmployee.swift; sourceTree = "<group>"; };
+		04F0B40E234C3662003819B7 /* RealmSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmSchedule.swift; sourceTree = "<group>"; };
+		04F0B410234C366F003819B7 /* RealmRoster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmRoster.swift; sourceTree = "<group>"; };
 		0718CCDE6143713203A9D7B8 /* Pods-EmployeeRosterTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmployeeRosterTests.release.xcconfig"; path = "Target Support Files/Pods-EmployeeRosterTests/Pods-EmployeeRosterTests.release.xcconfig"; sourceTree = "<group>"; };
 		4BF38923BD0CEC33E0435252 /* Pods-EmployeeRoster.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmployeeRoster.debug.xcconfig"; path = "Target Support Files/Pods-EmployeeRoster/Pods-EmployeeRoster.debug.xcconfig"; sourceTree = "<group>"; };
 		54DB1A68239D1D777C11D304 /* Pods-EmployeeRoster.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmployeeRoster.release.xcconfig"; path = "Target Support Files/Pods-EmployeeRoster/Pods-EmployeeRoster.release.xcconfig"; sourceTree = "<group>"; };
@@ -168,6 +176,34 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
+		0448C9742349B0550082369E /* RealmManager */ = {
+			isa = PBXGroup;
+			children = (
+				0448C9772349B36C0082369E /* RealmManager.swift */,
+			);
+			path = RealmManager;
+			sourceTree = "<group>";
+		};
+		04F0B40A234C35D3003819B7 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				04F0B40C234C360F003819B7 /* RealmEmployee.swift */,
+				04F0B40E234C3662003819B7 /* RealmSchedule.swift */,
+				04F0B410234C366F003819B7 /* RealmRoster.swift */,
+			);
+			path = Database;
+			sourceTree = "<group>";
+		};
+		04F0B40B234C35E1003819B7 /* Server */ = {
+			isa = PBXGroup;
+			children = (
+				AFC3E6BD22CCB34A005A8829 /* EmployeeModel.swift */,
+				AFC3E6BB22CCB318005A8829 /* ScheduleModel.swift */,
+				AFC3E6B922CCB2F7005A8829 /* RosterModel.swift */,
+			);
+			path = Server;
+			sourceTree = "<group>";
+		};
 		315346FCC84884FD337D36C4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -209,6 +245,7 @@
 				AFC3E6D322CCE6B7005A8829 /* Extension */,
 				AFC3E6C922CCD504005A8829 /* Constants */,
 				AFC3E6C622CCD488005A8829 /* Helper */,
+				0448C9742349B0550082369E /* RealmManager */,
 				AFC3E6AC22CCA3EE005A8829 /* Model */,
 				AFC3E6AB22CCA3E7005A8829 /* ViewModel */,
 				AFC3E6C122CCD3A2005A8829 /* TableViewCell */,
@@ -288,9 +325,8 @@
 		AFC3E6AC22CCA3EE005A8829 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				AFC3E6BD22CCB34A005A8829 /* EmployeeModel.swift */,
-				AFC3E6BB22CCB318005A8829 /* ScheduleModel.swift */,
-				AFC3E6B922CCB2F7005A8829 /* RosterModel.swift */,
+				04F0B40A234C35D3003819B7 /* Database */,
+				04F0B40B234C35E1003819B7 /* Server */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -373,6 +409,7 @@
 				AF1B098C22CC956D00C5EC90 /* Frameworks */,
 				AF1B098D22CC956D00C5EC90 /* Resources */,
 				DDAB17EA30DC81C81851DE2B /* [CP] Embed Pods Frameworks */,
+				046009E9232678B100493059 /* Run Swiftlint Script */,
 			);
 			buildRules = (
 			);
@@ -498,6 +535,24 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		046009E9232678B100493059 /* Run Swiftlint Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Swiftlint Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
 		5C3B655F124B38D9534A5AF3 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -605,6 +660,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04F0B411234C366F003819B7 /* RealmRoster.swift in Sources */,
 				AF1B09CB22CC988300C5EC90 /* WebService.swift in Sources */,
 				AFC3E6AF22CCA445005A8829 /* EmployeeRosterVC.swift in Sources */,
 				AFC3E6BC22CCB318005A8829 /* ScheduleModel.swift in Sources */,
@@ -621,12 +677,15 @@
 				AF1B09C522CC981800C5EC90 /* GetEmployeeInfoHandler.swift in Sources */,
 				AF1B099522CC956D00C5EC90 /* ViewController.swift in Sources */,
 				AF1B099322CC956D00C5EC90 /* AppDelegate.swift in Sources */,
+				0448C9782349B36C0082369E /* RealmManager.swift in Sources */,
 				AFC3E6C022CCBDD4005A8829 /* EmployeeViewModelProtocol.swift in Sources */,
 				AFC3E6CB22CCD51C005A8829 /* ThemeColor.swift in Sources */,
 				AFC3E6D222CCE0FD005A8829 /* EmployeeDetailCell.swift in Sources */,
 				AFC3E6C822CCD4A1005A8829 /* ActivityIndicator.swift in Sources */,
 				AF1B09CD22CC98BF00C5EC90 /* GetEmployeeInfoHandlerProtocol.swift in Sources */,
 				04D1C9AC23096764006FD8F7 /* NavigationControllerExtension.swift in Sources */,
+				04F0B40D234C360F003819B7 /* RealmEmployee.swift in Sources */,
+				04F0B40F234C3662003819B7 /* RealmSchedule.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

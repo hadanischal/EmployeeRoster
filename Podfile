@@ -11,7 +11,9 @@ target 'EmployeeRoster' do
   pod 'RxCocoa', '~> 5'
   pod 'SwiftLint'
   pod 'RxAlamofire'
-  
+  pod 'RealmSwift'
+  pod 'CocoaLumberjack/Swift'
+
   target 'EmployeeRosterTests' do
     inherit! :search_paths
     # Pods for testing

@@ -21,8 +21,8 @@ class RosterTableViewCell: UITableViewCell {
                 return
             }
             nameLabel?.text = data.name
-            startDateLabel?.text = "Start Date: \(data.from_date ?? "")"
-            endDateLabel?.text = "End date:\(data.to_date ?? "")"
+            startDateLabel?.text = "Start Date: \(data.fromDate ?? "")"
+            endDateLabel?.text = "End date:\(data.toDate ?? "")"
             photoImageView?.imageFromUrl(urlString: imageUrl)
         }
     }
@@ -32,7 +32,7 @@ class RosterTableViewCell: UITableViewCell {
         nameLabel?.textColor = UIColor.white
         startDateLabel?.textColor = UIColor.white
         endDateLabel?.textColor = UIColor.white
-        
+
         nameLabel?.font = .heading1
         startDateLabel?.font = .body1
         endDateLabel?.font = .body2
