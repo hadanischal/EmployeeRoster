@@ -20,6 +20,7 @@ class EmployeeViewModelTests: QuickSpec {
     override func spec() {
         var testViewModel: EmployeeViewModel!
         var mockGetEmployeeInfo: MockGetEmployeeInfoHandlerProtocol!
+        var mockRealmManager: MockRealmManagerDataSource!
         var testScheduler: TestScheduler!
 
         describe("EmployeeViewModel") {
@@ -29,7 +30,15 @@ class EmployeeViewModelTests: QuickSpec {
                 stub(mockGetEmployeeInfo, block: { stub in
                     when(stub.request()).thenReturn(Observable.just(EmployeeModel.empty))
                 })
-                testViewModel = EmployeeViewModel(withGetWeather: mockGetEmployeeInfo)
+
+                let employeeModel: EmployeeModel = MockData().stubEmployeeModel() ?? EmployeeModel.empty
+                mockRealmManager = MockRealmManagerDataSource()
+                stub(mockRealmManager) { stub in
+                    when(stub.fetchEmployeeInfo()).thenReturn(Single.just(employeeModel))
+                    when(stub.saveEmployeeInfo(withInfo: any())).thenReturn(Completable.empty())
+                }
+
+                testViewModel = EmployeeViewModel(withGetWeather: mockGetEmployeeInfo, withRealmManager: mockRealmManager)
             }
 
             describe("Get Employee Info from server", {
@@ -39,10 +48,16 @@ class EmployeeViewModelTests: QuickSpec {
                         stub(mockGetEmployeeInfo, block: { stub in
                             when(stub.request()).thenReturn(Observable.just(EmployeeModel.empty))
                         })
+                        stub(mockRealmManager) { stub in
+                            when(stub.saveEmployeeInfo(withInfo: any())).thenReturn(Completable.empty())
+                        }
                         testViewModel.getRosterInfo()
                     }
                     it("it completed successfully", closure: {
                         verify(mockGetEmployeeInfo).request()
+                    })
+                    it("it save to local DB successfully", closure: {
+                        verify(mockRealmManager).saveEmployeeInfo(withInfo: any())
                     })
                 })
 
