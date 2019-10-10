@@ -24,6 +24,9 @@ extension UIFont {
     static var navigationBarTitle: UIFont {
         return .lightFont(size: 24)
     }
+    static var navigationBarTitleLarge: UIFont {
+         return .regularFont(size: 35)
+     }
     static var navigationBarButtonItem: UIFont {
         return .lightFont(size: 20)
     }

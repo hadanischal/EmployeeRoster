@@ -23,14 +23,13 @@ class EmployeeRosterVC: UIViewController {
         super.viewDidLoad()
         self.setupUI()
         self.setupTableView()
-        self.viewModel = EmployeeViewModel()
         self.viewModelSetUp()
-        self.viewModel.getRosterInfo()
     }
 
     func setupUI() {
         self.navigationItem.title = "Roster"
         self.navigationController?.navigationBar.prefersLargeTitles = true
+        self.navigationController?.setCustomStyle()
         self.view.backgroundColor = UIColor.white
     }
 
@@ -41,7 +40,8 @@ class EmployeeRosterVC: UIViewController {
     }
 
     func viewModelSetUp() {
-        self.viewModel.employeeResult
+        viewModel = EmployeeViewModel()
+        viewModel.employeeResult
             .subscribe(onNext: { result in
                 self.employeeList = result
                 DispatchQueue.main.async {
@@ -51,27 +51,31 @@ class EmployeeRosterVC: UIViewController {
                 print("error:\(error)")
             }).disposed(by: disposeBag)
 
-        self.viewModel
+        viewModel
             .errorResult
             .subscribe(onNext: { error in
                 print("error:\(error)")
             })
             .disposed(by: disposeBag)
 
-        self.buttonRefresh.rx.tap
+        buttonRefresh.rx.tap
             .subscribe(onNext: { [weak self] _ in
                 self?.viewModel.getRosterInfo()
             }).disposed(by: disposeBag)
-    }
 
+        viewModel.getRosterInfoFromDB()
+        viewModel.getRosterInfo()
+
+    }
 }
 
 // MARK: - TableViewDelegate Setup
 extension EmployeeRosterVC: UITableViewDataSource, UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        switch indexPath.section {
-        case 0:
+        let employeeSection = EmployeeSectionModel(rawValue: indexPath.section)
+        switch employeeSection {
+        case .header:
             return 200
         default:
             return 150
@@ -79,32 +83,30 @@ extension EmployeeRosterVC: UITableViewDataSource, UITableViewDelegate {
     }
 
      func numberOfSections(in tableView: UITableView) -> Int {
-        if let _ = self.employeeList {
-            return 2
-        }
-        return 0
+        return self.employeeList != nil ? 2 : 0
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        switch section {
-        case 0:
-            if let _ = self.employeeList {
-                return 1
-            }
-            return 0
+        let employeeSection = EmployeeSectionModel(rawValue: section)
+
+        switch employeeSection {
+        case .header:
+            return self.employeeList != nil ? 1 : 0
+
         default:
             return self.employeeList?.roster?.count ?? 0
         }
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let employeeSection = EmployeeSectionModel(rawValue: indexPath.section)
 
-        switch indexPath.section {
-        case 0:
+        switch employeeSection {
+        case .header:
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "RosterTableViewCell", for: indexPath) as? RosterTableViewCell else {
                 fatalError("RosterTableViewCell does not exist")
             }
-            cell.dataValue = self.employeeList?.scheduled_today
+            cell.dataValue = self.employeeList?.scheduledToday
             return cell
 
         default:

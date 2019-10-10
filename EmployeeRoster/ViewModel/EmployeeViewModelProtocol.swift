@@ -12,4 +12,5 @@ protocol EmployeeViewModelProtocol {
     var employeeResult: Observable<EmployeeModel> { get }
     var errorResult: Observable<Error> { get }
     func getRosterInfo()
+    func getRosterInfoFromDB()
 }

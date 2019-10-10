@@ -11,6 +11,22 @@ import XCTest
 @testable import EmployeeRoster
 
 class MockData {
+
+    func stubEmployeeModel() -> EmployeeModel? {
+        guard let data = self.getData() else {
+            XCTAssert(false, "Can't get data from jobs.json")
+            return nil
+        }
+
+        let decoder = JSONDecoder()
+        if let result = try? decoder.decode(EmployeeModel.self, from: data) {
+            return result
+        } else {
+            XCTAssert(false, "Unable to parse ArticlesList results")
+            return nil
+        }
+    }
+
     func getData() -> Data? {
         let bundle = Bundle(for: type(of: self))
         guard let url = bundle.url(forResource: "employee", withExtension: "json") else {
@@ -20,7 +36,7 @@ class MockData {
         do {
             let data = try Data(contentsOf: url)
             return data
-        } catch (_) {
+        } catch {
             XCTFail("unable to read json")
             return nil
         }
