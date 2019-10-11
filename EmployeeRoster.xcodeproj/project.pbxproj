@@ -15,6 +15,8 @@
 		04D1C9AA230965C3006FD8F7 /* FontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D1C9A9230965C3006FD8F7 /* FontExtension.swift */; };
 		04D1C9AC23096764006FD8F7 /* NavigationControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D1C9AB23096764006FD8F7 /* NavigationControllerExtension.swift */; };
 		04E71127234F2E7D003BA780 /* EmployeeSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E71126234F2E7D003BA780 /* EmployeeSectionModel.swift */; };
+		04E7112D234F536B003BA780 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E7112C234F536B003BA780 /* UITableView+Extensions.swift */; };
+		04E71131234F53C1003BA780 /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E71130234F53C1003BA780 /* ReusableView.swift */; };
 		04F0B40D234C360F003819B7 /* RealmEmployee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F0B40C234C360F003819B7 /* RealmEmployee.swift */; };
 		04F0B40F234C3662003819B7 /* RealmSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F0B40E234C3662003819B7 /* RealmSchedule.swift */; };
 		04F0B411234C366F003819B7 /* RealmRoster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F0B410234C366F003819B7 /* RealmRoster.swift */; };
@@ -46,7 +48,7 @@
 		AFC3E6C322CCD3BF005A8829 /* RosterTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC3E6C222CCD3BF005A8829 /* RosterTableViewCell.swift */; };
 		AFC3E6C522CCD3D7005A8829 /* EmployeeListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC3E6C422CCD3D7005A8829 /* EmployeeListCell.swift */; };
 		AFC3E6C822CCD4A1005A8829 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC3E6C722CCD4A1005A8829 /* ActivityIndicator.swift */; };
-		AFC3E6CB22CCD51C005A8829 /* ThemeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC3E6CA22CCD51C005A8829 /* ThemeColor.swift */; };
+		AFC3E6CB22CCD51C005A8829 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC3E6CA22CCD51C005A8829 /* UIColor+Extension.swift */; };
 		AFC3E6D022CCDF34005A8829 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = AFC3E6CF22CCDF34005A8829 /* .swiftlint.yml */; };
 		AFC3E6D222CCE0FD005A8829 /* EmployeeDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC3E6D122CCE0FD005A8829 /* EmployeeDetailCell.swift */; };
 		AFC3E6D522CCE700005A8829 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC3E6D422CCE700005A8829 /* UIImageViewExtension.swift */; };
@@ -80,6 +82,8 @@
 		04D1C9A9230965C3006FD8F7 /* FontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontExtension.swift; sourceTree = "<group>"; };
 		04D1C9AB23096764006FD8F7 /* NavigationControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerExtension.swift; sourceTree = "<group>"; };
 		04E71126234F2E7D003BA780 /* EmployeeSectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeSectionModel.swift; sourceTree = "<group>"; };
+		04E7112C234F536B003BA780 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
+		04E71130234F53C1003BA780 /* ReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableView.swift; sourceTree = "<group>"; };
 		04F0B40C234C360F003819B7 /* RealmEmployee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmEmployee.swift; sourceTree = "<group>"; };
 		04F0B40E234C3662003819B7 /* RealmSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmSchedule.swift; sourceTree = "<group>"; };
 		04F0B410234C366F003819B7 /* RealmRoster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmRoster.swift; sourceTree = "<group>"; };
@@ -122,7 +126,7 @@
 		AFC3E6C222CCD3BF005A8829 /* RosterTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RosterTableViewCell.swift; sourceTree = "<group>"; };
 		AFC3E6C422CCD3D7005A8829 /* EmployeeListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListCell.swift; sourceTree = "<group>"; };
 		AFC3E6C722CCD4A1005A8829 /* ActivityIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
-		AFC3E6CA22CCD51C005A8829 /* ThemeColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeColor.swift; sourceTree = "<group>"; };
+		AFC3E6CA22CCD51C005A8829 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		AFC3E6CF22CCDF34005A8829 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
 		AFC3E6D122CCE0FD005A8829 /* EmployeeDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDetailCell.swift; sourceTree = "<group>"; };
 		AFC3E6D422CCE700005A8829 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
@@ -186,6 +190,23 @@
 			path = RealmManager;
 			sourceTree = "<group>";
 		};
+		04E7112E234F53A4003BA780 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AFC3E6C122CCD3A2005A8829 /* TableViewCell */,
+				04E7112F234F53B1003BA780 /* CustomViews */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		04E7112F234F53B1003BA780 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				04E71130234F53C1003BA780 /* ReusableView.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
 		04F0B40A234C35D3003819B7 /* Database */ = {
 			isa = PBXGroup;
 			children = (
@@ -246,13 +267,12 @@
 			children = (
 				0407F32123084180001E66A0 /* Resources */,
 				AFC3E6D322CCE6B7005A8829 /* Extension */,
-				AFC3E6C922CCD504005A8829 /* Constants */,
 				AFC3E6C622CCD488005A8829 /* Helper */,
 				0448C9742349B0550082369E /* RealmManager */,
 				AFC3E6AC22CCA3EE005A8829 /* Model */,
 				AFC3E6AB22CCA3E7005A8829 /* ViewModel */,
-				AFC3E6C122CCD3A2005A8829 /* TableViewCell */,
-				AFC3E6AD22CCA3F4005A8829 /* View */,
+				AFC3E6AD22CCA3F4005A8829 /* ViewController */,
+				04E7112E234F53A4003BA780 /* Views */,
 				AF1B09C622CC985300C5EC90 /* Service */,
 				AF1B099222CC956D00C5EC90 /* AppDelegate.swift */,
 				AF1B099422CC956D00C5EC90 /* ViewController.swift */,
@@ -334,12 +354,12 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		AFC3E6AD22CCA3F4005A8829 /* View */ = {
+		AFC3E6AD22CCA3F4005A8829 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
 				AFC3E6AE22CCA445005A8829 /* EmployeeRosterVC.swift */,
 			);
-			path = View;
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		AFC3E6C122CCD3A2005A8829 /* TableViewCell */ = {
@@ -360,21 +380,15 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
-		AFC3E6C922CCD504005A8829 /* Constants */ = {
-			isa = PBXGroup;
-			children = (
-				AFC3E6CA22CCD51C005A8829 /* ThemeColor.swift */,
-			);
-			path = Constants;
-			sourceTree = "<group>";
-		};
 		AFC3E6D322CCE6B7005A8829 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
 				AFC3E6D422CCE700005A8829 /* UIImageViewExtension.swift */,
 				0407F329230841ED001E66A0 /* ColourExtension.swift */,
 				04D1C9A9230965C3006FD8F7 /* FontExtension.swift */,
+				AFC3E6CA22CCD51C005A8829 /* UIColor+Extension.swift */,
 				04D1C9AB23096764006FD8F7 /* NavigationControllerExtension.swift */,
+				04E7112C234F536B003BA780 /* UITableView+Extensions.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -708,6 +722,7 @@
 				0407F32A230841ED001E66A0 /* ColourExtension.swift in Sources */,
 				AF1B09C922CC987100C5EC90 /* WebServiceProtocol.swift in Sources */,
 				AFC3E6BA22CCB2F7005A8829 /* RosterModel.swift in Sources */,
+				04E71131234F53C1003BA780 /* ReusableView.swift in Sources */,
 				AFC3E6D522CCE700005A8829 /* UIImageViewExtension.swift in Sources */,
 				04E71127234F2E7D003BA780 /* EmployeeSectionModel.swift in Sources */,
 				AFC3E6C322CCD3BF005A8829 /* RosterTableViewCell.swift in Sources */,
@@ -715,12 +730,13 @@
 				AFC3E6BE22CCB34A005A8829 /* EmployeeModel.swift in Sources */,
 				AFC3E6B122CCA45A005A8829 /* EmployeeViewModel.swift in Sources */,
 				AFC3E6C522CCD3D7005A8829 /* EmployeeListCell.swift in Sources */,
+				04E7112D234F536B003BA780 /* UITableView+Extensions.swift in Sources */,
 				AF1B09C522CC981800C5EC90 /* GetEmployeeInfoHandler.swift in Sources */,
 				AF1B099522CC956D00C5EC90 /* ViewController.swift in Sources */,
 				AF1B099322CC956D00C5EC90 /* AppDelegate.swift in Sources */,
 				0448C9782349B36C0082369E /* RealmManager.swift in Sources */,
 				AFC3E6C022CCBDD4005A8829 /* EmployeeViewModelProtocol.swift in Sources */,
-				AFC3E6CB22CCD51C005A8829 /* ThemeColor.swift in Sources */,
+				AFC3E6CB22CCD51C005A8829 /* UIColor+Extension.swift in Sources */,
 				AFC3E6D222CCE0FD005A8829 /* EmployeeDetailCell.swift in Sources */,
 				AFC3E6C822CCD4A1005A8829 /* ActivityIndicator.swift in Sources */,
 				AF1B09CD22CC98BF00C5EC90 /* GetEmployeeInfoHandlerProtocol.swift in Sources */,

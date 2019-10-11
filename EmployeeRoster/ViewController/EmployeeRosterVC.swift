@@ -9,6 +9,7 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import CocoaLumberjack
 
 class EmployeeRosterVC: UIViewController {
     @IBOutlet weak var tableView: UITableView?
@@ -42,19 +43,18 @@ class EmployeeRosterVC: UIViewController {
     func viewModelSetUp() {
         viewModel = EmployeeViewModel()
         viewModel.employeeResult
+            .observeOn(MainScheduler.instance)
             .subscribe(onNext: { result in
                 self.employeeList = result
-                DispatchQueue.main.async {
-                    self.tableView?.reloadData()
-                }
+                self.tableView?.reloadData()
             }, onError: { (error) in
-                print("error:\(error)")
+                DDLogError("onError: \(error)")
             }).disposed(by: disposeBag)
 
         viewModel
             .errorResult
             .subscribe(onNext: { error in
-                print("error:\(error)")
+                DDLogError("onError: \(error)")
             })
             .disposed(by: disposeBag)
 
@@ -65,7 +65,6 @@ class EmployeeRosterVC: UIViewController {
 
         viewModel.getRosterInfoFromDB()
         viewModel.getRosterInfo()
-
     }
 }
 
@@ -103,26 +102,21 @@ extension EmployeeRosterVC: UITableViewDataSource, UITableViewDelegate {
 
         switch employeeSection {
         case .header:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "RosterTableViewCell", for: indexPath) as? RosterTableViewCell else {
-                fatalError("RosterTableViewCell does not exist")
-            }
+            let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as RosterTableViewCell
             cell.dataValue = self.employeeList?.scheduledToday
             return cell
 
         default:
-            guard let cell = tableView.dequeueReusableCell(withIdentifier: "EmployeeDetailCell", for: indexPath) as? EmployeeDetailCell else {
-                fatalError("EmployeeDetailCell does not exist")
+            let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as EmployeeDetailCell
+            guard let roster = self.employeeList?.roster else {
+                return cell
             }
-            if
-                let roster = self.employeeList?.roster
-            {
-                cell.dataValue = roster[indexPath.row]
-            }
+            cell.dataValue = roster[indexPath.row]
             return cell
         }
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("tapped")
+        DDLogInfo("tapped")
     }
 }

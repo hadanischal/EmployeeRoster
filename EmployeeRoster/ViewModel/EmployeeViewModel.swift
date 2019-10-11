@@ -71,7 +71,7 @@ class EmployeeViewModel: EmployeeViewModelProtocol {
             .subscribe(onSuccess: { [weak self] result in
                 self?.employeeResultSubject.on(.next(result))
                 }, onError: { error in
-                    print("fetch from DB error :", error)
+                    DDLogError("fetch from DB error : \(error)")
             }).disposed(by: disposeBag)
     }
 
