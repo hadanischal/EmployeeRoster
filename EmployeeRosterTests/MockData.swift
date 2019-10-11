@@ -19,6 +19,7 @@ class MockData {
         }
 
         let decoder = JSONDecoder()
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
         if let result = try? decoder.decode(EmployeeModel.self, from: data) {
             return result
         } else {

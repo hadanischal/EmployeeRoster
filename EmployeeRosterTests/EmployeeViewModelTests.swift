@@ -22,6 +22,7 @@ class EmployeeViewModelTests: QuickSpec {
         var mockGetEmployeeInfo: MockGetEmployeeInfoHandlerProtocol!
         var mockRealmManager: MockRealmManagerDataSource!
         var testScheduler: TestScheduler!
+        let employeeModel: EmployeeModel = MockData().stubEmployeeModel() ?? EmployeeModel.empty
 
         describe("EmployeeViewModel") {
             beforeEach {
@@ -31,7 +32,6 @@ class EmployeeViewModelTests: QuickSpec {
                     when(stub.request()).thenReturn(Observable.just(EmployeeModel.empty))
                 })
 
-                let employeeModel: EmployeeModel = MockData().stubEmployeeModel() ?? EmployeeModel.empty
                 mockRealmManager = MockRealmManagerDataSource()
                 stub(mockRealmManager) { stub in
                     when(stub.fetchEmployeeInfo()).thenReturn(Single.just(employeeModel))
@@ -46,29 +46,32 @@ class EmployeeViewModelTests: QuickSpec {
                 context("when server request succeed ", {
                     beforeEach {
                         stub(mockGetEmployeeInfo, block: { stub in
-                            when(stub.request()).thenReturn(Observable.just(EmployeeModel.empty))
+                            when(stub.request()).thenReturn(Observable.just(employeeModel))
                         })
                         stub(mockRealmManager) { stub in
                             when(stub.saveEmployeeInfo(withInfo: any())).thenReturn(Completable.empty())
                         }
-                        testViewModel.getRosterInfo()
+                        testScheduler.scheduleAt(300, action: {
+                            testViewModel.getRosterInfo()
+                        })
                     }
                     it("it completed successfully", closure: {
-                        verify(mockGetEmployeeInfo).request()
+                        testScheduler.scheduleAt(300, action: {
+                            verify(mockGetEmployeeInfo).request()
+                        })
                     })
                     it("it save to local DB successfully", closure: {
-                        verify(mockRealmManager).saveEmployeeInfo(withInfo: any())
+                        testScheduler.scheduleAt(300, action: {
+                            verify(mockRealmManager).saveEmployeeInfo(withInfo: any())
+                        })
                     })
-                })
 
-                it("emits the employeeResult to the UI", closure: {
-                    testScheduler.scheduleAt(300, action: {
-                        testViewModel.getRosterInfo()
+                    it("emits the employeeResult to the UI", closure: {
+                        let res = testScheduler.start { testViewModel.employeeResult.asObservable() }
+                        expect(res.events.count).to(equal(1))
+                        let correctResult = [Recorded.next(300, employeeModel)]
+                        expect(res.events).to(equal(correctResult))
                     })
-                    let res = testScheduler.start { testViewModel.employeeResult.asObservable() }
-                    expect(res.events.count).to(equal(1))
-                    expect(res.events.first?.time).to(equal(300))
-                    expect(res.events.last?.time).to(equal(300))
                 })
 
                 context("when server request failed ", {
@@ -76,6 +79,9 @@ class EmployeeViewModelTests: QuickSpec {
                         stub(mockGetEmployeeInfo, block: { stub in
                             when(stub.request()).thenReturn(Observable.error(RxError.noElements))
                         })
+                        stub(mockRealmManager) { stub in
+                            when(stub.saveEmployeeInfo(withInfo: any())).thenReturn(Completable.empty())
+                        }
                         testViewModel.getRosterInfo()
                     }
 
@@ -85,6 +91,64 @@ class EmployeeViewModelTests: QuickSpec {
                         })
                         let res = testScheduler.start { testViewModel.employeeResult.asObservable() }
                         expect(res.events).to(beEmpty())
+                    })
+                })
+            })
+
+            describe("Save and retreive Employee Info from Database", {
+
+                context("when saveEmployeeInfo to realmManager succeed ", {
+                    beforeEach {
+                        stub(mockGetEmployeeInfo, block: { stub in
+                            when(stub.request()).thenReturn(Observable.just(EmployeeModel.empty))
+                        })
+                        stub(mockRealmManager) { stub in
+                            when(stub.saveEmployeeInfo(withInfo: any())).thenReturn(Completable.empty())
+                        }
+                        testViewModel.getRosterInfo()
+                    }
+                    it("calls to realmManager to saveEmployeeInfo", closure: {
+                        verify(mockRealmManager).saveEmployeeInfo(withInfo: any())
+                    })
+                })
+
+                context("when saveEmployeeInfo to realmManager failed ", {
+                    beforeEach {
+                        stub(mockGetEmployeeInfo, block: { stub in
+                            when(stub.request()).thenReturn(Observable.just(EmployeeModel.empty))
+                        })
+                        stub(mockRealmManager) { stub in
+                            when(stub.saveEmployeeInfo(withInfo: any())).thenReturn(Completable.error(MockError.noElements))
+                        }
+                        testViewModel.getRosterInfo()
+                    }
+                    it("calls to realmManager to saveEmployeeInfo", closure: {
+                        verify(mockRealmManager).saveEmployeeInfo(withInfo: any())
+                    })
+                })
+
+                context("when getRosterInfo from realmManager succeed ", {
+                    beforeEach {
+                        stub(mockGetEmployeeInfo, block: { stub in
+                            when(stub.request()).thenReturn(Observable.just(employeeModel))
+                        })
+                        stub(mockRealmManager) { stub in
+                            when(stub.fetchEmployeeInfo()).thenReturn(Single.just(employeeModel))
+                        }
+                        testScheduler.scheduleAt(300) {
+                            testViewModel.getRosterInfoFromDB()
+                        }
+                    }
+                    it("calls to realmManager to saveEmployeeInfo", closure: {
+                        testScheduler.scheduleAt(300) {
+                            verify(mockRealmManager).fetchEmployeeInfo()
+                        }
+                    })
+                    it("emits the employeeResult to the UI", closure: {
+                        let res = testScheduler.start { testViewModel.employeeResult.asObservable() }
+                        expect(res.events.count).to(equal(1))
+                        let correctResult = [Recorded.next(300, employeeModel)]
+                        expect(res.events).to(equal(correctResult))
                     })
                 })
             })

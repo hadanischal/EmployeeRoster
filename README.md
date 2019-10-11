@@ -16,7 +16,7 @@ Model-View-ViewModel (MVVM) is a structural design pattern that separates object
 * Views display visual elements and controls on the screen. They’re typically subclasses of UIView.
 * View models transform model information into values that can be displayed on a view. They’re usually classes, so they can be passed around as references.
 
-![Alt text](/ScreenShots/MVVM.png?raw=true "MVVM-C iOS app architecture pattern")
+![Alt text](/ScreenShots/mvvm.png?raw=true "MVVM iOS app architecture pattern")
 
 ## Why MVVM?
 * Segregated Code: Making the code segregated. MVVM component based divides a particular view handling distributed across the View, Model and View Model, thereby providing us with a modularised code structure.

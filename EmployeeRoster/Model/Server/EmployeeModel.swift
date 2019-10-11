@@ -25,6 +25,13 @@ extension EmployeeModel {
     }
 }
 
+extension EmployeeModel: Equatable {
+    static func == (lhs: EmployeeModel, rhs: EmployeeModel) -> Bool {
+        return lhs.tenant == rhs.tenant
+            && lhs.motd == rhs.motd
+    }
+}
+
 extension EmployeeModel {
     static var empty: EmployeeModel {
         return EmployeeModel(tenant: "", motd: "", scheduledToday: nil, roster: nil)
