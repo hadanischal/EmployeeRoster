@@ -17,7 +17,10 @@ protocol RealmManagerDataSource {
 }
 
 class RealmManager: RealmManagerDataSource {
-    init() {
+    private var queueScheduler: SchedulerType!
+
+    init(withQueueScheduler queueScheduler: SchedulerType = ConcurrentDispatchQueueScheduler(qos: DispatchQoS.default)) {
+        self.queueScheduler = queueScheduler
     }
 
     /// clear and save employee info to DB
@@ -27,7 +30,7 @@ class RealmManager: RealmManagerDataSource {
     }
 
     /// Save employee info to DB
-    func saveInfo(withInfo data: EmployeeModel) -> Completable {
+   private func saveInfo(withInfo data: EmployeeModel) -> Completable {
         return Completable.create { completable in
             do {
                 let realm = try Realm()
@@ -82,7 +85,7 @@ class RealmManager: RealmManagerDataSource {
                 single(.error(error))
             }
             return Disposables.create {}
-            }.subscribeOn(ConcurrentDispatchQueueScheduler(qos: DispatchQoS.default))
+            }.subscribeOn(self.queueScheduler)
     }
 
     /// clear employee info from DB
