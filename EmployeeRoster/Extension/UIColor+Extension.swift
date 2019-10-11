@@ -1,5 +1,5 @@
 //
-//  ThemeColor.swift
+//  UIColor+Extension.swift
 //  EmployeeRoster
 //
 //  Created by Nischal Hada on 7/3/19.

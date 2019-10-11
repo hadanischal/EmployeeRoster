@@ -11,15 +11,11 @@ import UIKit
 // swiftlint:disable all
 extension UIColor {
     static var primary: UIColor {
-//        return UIColor(rgb: 0x40c5eeff)
-        return UIColor(hex: "#40c5eeff") ?? UIColor.gray //UIColor(hex: "#40C5EE")!
+        return UIColor(hex: "#40c5eeff") ?? UIColor.gray
     }
     static var viewBackgroundColor: UIColor {
         return UIColor(red: 0.933, green: 0.941, blue: 0.945, alpha: 1.00)
     }
-//    static var viewBackgroundColor: UIColor {
-//        return UIColor(rgb: 0x5c9ac1)
-//    }
     static var addCityViewBackgroundColor: UIColor {
         return UIColor(rgb: 0xEAE8EA)
     }
