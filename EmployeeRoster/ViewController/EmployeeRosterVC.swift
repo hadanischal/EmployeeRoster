@@ -44,10 +44,10 @@ class EmployeeRosterVC: UIViewController {
         viewModel = EmployeeViewModel()
         viewModel.employeeResult
             .observeOn(MainScheduler.instance)
-            .subscribe(onNext: { result in
-                self.employeeList = result
-                self.tableView?.reloadData()
-            }, onError: { (error) in
+            .subscribe(onNext: { [weak self] result in
+                self?.employeeList = result
+                self?.tableView?.reloadData()
+            }, onError: { error in
                 DDLogError("onError: \(error)")
             }).disposed(by: disposeBag)
 

@@ -4,6 +4,7 @@ PODS:
   - CocoaLumberjack/Swift (3.5.3):
     - CocoaLumberjack/Core
   - Cuckoo (1.0.6)
+  - KeychainAccess (3.2.0)
   - Nimble (8.0.2)
   - Quick (2.1.0)
   - Realm (3.17.3):
@@ -32,6 +33,7 @@ DEPENDENCIES:
   - Alamofire (~> 4.8.2)
   - CocoaLumberjack/Swift
   - Cuckoo (~> 1.0.6)
+  - KeychainAccess
   - Nimble (~> 8)
   - Quick (~> 2.1.0)
   - RealmSwift
@@ -43,7 +45,7 @@ DEPENDENCIES:
   - SwiftLint
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  https://github.com/CocoaPods/Specs.git:
     - Alamofire
     - CocoaLumberjack
     - Cuckoo
@@ -58,11 +60,14 @@ SPEC REPOS:
     - RxSwift
     - RxTest
     - SwiftLint
+  trunk:
+    - KeychainAccess
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
   CocoaLumberjack: 2f44e60eb91c176d471fdba43b9e3eae6a721947
   Cuckoo: 8074fc309159c4862665b83798f5ad03e061e8bd
+  KeychainAccess: 3b1bf8a77eb4c6ea1ce9404c292e48f948954c6b
   Nimble: 622629381bda1dd5678162f21f1368cec7cbba60
   Quick: 4be43f6634acfa727dd106bdf3929ce125ffa79d
   Realm: 5a1d9d47bfc101dd597668b1a8af4288a2557f6d
@@ -75,6 +80,6 @@ SPEC CHECKSUMS:
   RxTest: 4349afe98f564e0a9bc19063368904622d17d49a
   SwiftLint: fed9c66336e41fc74dc48a73678380718f0c8b0e
 
-PODFILE CHECKSUM: 5da738b58220d0f78735ddcd70496627f5591444
+PODFILE CHECKSUM: f4759ee7a140fd3f097ebca8bec1932c1bd290d0
 
-COCOAPODS: 1.7.5
+COCOAPODS: 1.8.3
