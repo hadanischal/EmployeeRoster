@@ -12,6 +12,7 @@ target 'EmployeeRoster' do
   pod 'SwiftLint'
   pod 'RxAlamofire'
   pod 'RealmSwift'
+  pod 'KeychainAccess'
   pod 'CocoaLumberjack/Swift'
 
   target 'EmployeeRosterTests' do

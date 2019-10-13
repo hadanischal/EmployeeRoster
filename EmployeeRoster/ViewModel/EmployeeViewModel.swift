@@ -50,8 +50,8 @@ class EmployeeViewModel: EmployeeViewModelProtocol {
                 self?.employeeResultSubject.on(.next(result))
                 return result
             }
-            .flatMap { result -> Completable in
-                return self.realmManager.saveEmployeeInfo(withInfo: result)
+            .flatMap { [weak self] result -> Completable in
+                return self?.realmManager.saveEmployeeInfo(withInfo: result) ?? Completable.empty()
             }.subscribe(onNext: { _ in
                 DDLogInfo("onNext")
             }, onError: { [weak self] error in
