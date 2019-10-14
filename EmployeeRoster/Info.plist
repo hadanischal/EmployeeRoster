@@ -53,5 +53,7 @@
         <string>GothamRounded-Medium.otf</string>
         <string>GothamRounded-Light.otf</string>
     </array>
+    <key>NSCalendarsUsageDescription</key>
+    <string>This app need to access your calendar events</string>
 </dict>
 </plist>
