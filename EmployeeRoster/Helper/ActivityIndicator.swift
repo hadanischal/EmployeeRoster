@@ -9,7 +9,7 @@
 import UIKit
 
 class ActivityIndicator {
-    let appDelegate = UIApplication.shared.delegate
+    weak var appDelegate = UIApplication.shared.delegate
     var parentView: UIView?
     var color: UIColor?
 
