@@ -16,7 +16,7 @@ protocol RealmManagerDataSource {
     func fetchEmployeeInfo() -> Single<EmployeeModel>
 }
 
-class RealmManager: RealmManagerDataSource {
+struct RealmManager: RealmManagerDataSource {
     private var queueScheduler: SchedulerType!
 
     init(withQueueScheduler queueScheduler: SchedulerType = ConcurrentDispatchQueueScheduler(qos: DispatchQoS.default)) {
