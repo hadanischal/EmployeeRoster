@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0402491423546B9800478C74 /* EventsCalendarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0402491223546B9800478C74 /* EventsCalendarManager.swift */; };
+		0402492023546C4400478C74 /* DateFormatter+Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0402491D23546C4400478C74 /* DateFormatter+Formatters.swift */; };
+		0402492123546C4400478C74 /* String+Extension .swift in Sources */ = {isa = PBXBuildFile; fileRef = 0402491E23546C4400478C74 /* String+Extension .swift */; };
+		0402492223546C4400478C74 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0402491F23546C4400478C74 /* Date+Extensions.swift */; };
 		0407F32623084190001E66A0 /* GothamRounded-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0407F32323084190001E66A0 /* GothamRounded-Medium.otf */; };
 		0407F32723084190001E66A0 /* GothamRounded-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0407F32423084190001E66A0 /* GothamRounded-Bold.otf */; };
 		0407F32823084190001E66A0 /* GothamRounded-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0407F32523084190001E66A0 /* GothamRounded-Light.otf */; };
@@ -16,8 +20,6 @@
 		04A073C2235141CD0042A062 /* MockError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A073C1235141CD0042A062 /* MockError.swift */; };
 		04A073C5235148280042A062 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A073C4235148280042A062 /* KeychainManager.swift */; };
 		04A073C72351483E0042A062 /* KeychainManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A073C62351483E0042A062 /* KeychainManagerTests.swift */; };
-		04A073CB235148570042A062 /* RealmMigrationsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A073C9235148570042A062 /* RealmMigrationsHelper.swift */; };
-		04A073CC235148570042A062 /* EncryptedCredentialsRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A073CA235148570042A062 /* EncryptedCredentialsRealm.swift */; };
 		04D1C9AA230965C3006FD8F7 /* FontExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D1C9A9230965C3006FD8F7 /* FontExtension.swift */; };
 		04D1C9AC23096764006FD8F7 /* NavigationControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04D1C9AB23096764006FD8F7 /* NavigationControllerExtension.swift */; };
 		04E71127234F2E7D003BA780 /* EmployeeSectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E71126234F2E7D003BA780 /* EmployeeSectionModel.swift */; };
@@ -28,7 +30,7 @@
 		04F0B411234C366F003819B7 /* RealmRoster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F0B410234C366F003819B7 /* RealmRoster.swift */; };
 		04FD560A2352AB75009420B9 /* EKEventError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FD56022352AB75009420B9 /* EKEventError.swift */; };
 		04FD560C2352AB75009420B9 /* EventsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FD56042352AB75009420B9 /* EventsModel.swift */; };
-		04FD560F2352AB75009420B9 /* EKEventStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FD56082352AB75009420B9 /* EKEventStatus.swift */; };
+		04FD560F2352AB75009420B9 /* EKEventHelperStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FD56082352AB75009420B9 /* EKEventHelperStatus.swift */; };
 		04FD56102352AB75009420B9 /* EKEventHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FD56092352AB75009420B9 /* EKEventHelper.swift */; };
 		04FD56222352D6B5009420B9 /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FD56212352D6B5009420B9 /* Bundle+Extension.swift */; };
 		221BAC8A917539156B432BE5 /* Pods_EmployeeRosterTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92F8AFB9E85A1A40857DFB7A /* Pods_EmployeeRosterTests.framework */; };
@@ -85,6 +87,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0402491223546B9800478C74 /* EventsCalendarManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsCalendarManager.swift; sourceTree = "<group>"; };
+		0402491D23546C4400478C74 /* DateFormatter+Formatters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DateFormatter+Formatters.swift"; sourceTree = "<group>"; };
+		0402491E23546C4400478C74 /* String+Extension .swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension .swift"; sourceTree = "<group>"; };
+		0402491F23546C4400478C74 /* Date+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		0407F32323084190001E66A0 /* GothamRounded-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GothamRounded-Medium.otf"; sourceTree = "<group>"; };
 		0407F32423084190001E66A0 /* GothamRounded-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GothamRounded-Bold.otf"; sourceTree = "<group>"; };
 		0407F32523084190001E66A0 /* GothamRounded-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GothamRounded-Light.otf"; sourceTree = "<group>"; };
@@ -94,8 +100,6 @@
 		04A073C1235141CD0042A062 /* MockError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockError.swift; sourceTree = "<group>"; };
 		04A073C4235148280042A062 /* KeychainManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
 		04A073C62351483E0042A062 /* KeychainManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainManagerTests.swift; sourceTree = "<group>"; };
-		04A073C9235148570042A062 /* RealmMigrationsHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmMigrationsHelper.swift; sourceTree = "<group>"; };
-		04A073CA235148570042A062 /* EncryptedCredentialsRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EncryptedCredentialsRealm.swift; sourceTree = "<group>"; };
 		04D1C9A9230965C3006FD8F7 /* FontExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FontExtension.swift; sourceTree = "<group>"; };
 		04D1C9AB23096764006FD8F7 /* NavigationControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerExtension.swift; sourceTree = "<group>"; };
 		04E71126234F2E7D003BA780 /* EmployeeSectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeSectionModel.swift; sourceTree = "<group>"; };
@@ -106,7 +110,7 @@
 		04F0B410234C366F003819B7 /* RealmRoster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmRoster.swift; sourceTree = "<group>"; };
 		04FD56022352AB75009420B9 /* EKEventError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EKEventError.swift; sourceTree = "<group>"; };
 		04FD56042352AB75009420B9 /* EventsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsModel.swift; sourceTree = "<group>"; };
-		04FD56082352AB75009420B9 /* EKEventStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EKEventStatus.swift; sourceTree = "<group>"; };
+		04FD56082352AB75009420B9 /* EKEventHelperStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EKEventHelperStatus.swift; sourceTree = "<group>"; };
 		04FD56092352AB75009420B9 /* EKEventHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EKEventHelper.swift; sourceTree = "<group>"; };
 		04FD56212352D6B5009420B9 /* Bundle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
 		0718CCDE6143713203A9D7B8 /* Pods-EmployeeRosterTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmployeeRosterTests.release.xcconfig"; path = "Target Support Files/Pods-EmployeeRosterTests/Pods-EmployeeRosterTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -196,6 +200,24 @@
 			path = Utility;
 			sourceTree = "<group>";
 		};
+		0402491023546B9800478C74 /* EventsCalendarManager */ = {
+			isa = PBXGroup;
+			children = (
+				0402491223546B9800478C74 /* EventsCalendarManager.swift */,
+			);
+			path = EventsCalendarManager;
+			sourceTree = "<group>";
+		};
+		0402491C23546C4400478C74 /* DateExtensions */ = {
+			isa = PBXGroup;
+			children = (
+				0402491D23546C4400478C74 /* DateFormatter+Formatters.swift */,
+				0402491E23546C4400478C74 /* String+Extension .swift */,
+				0402491F23546C4400478C74 /* Date+Extensions.swift */,
+			);
+			path = DateExtensions;
+			sourceTree = "<group>";
+		};
 		0407F32123084180001E66A0 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -228,15 +250,6 @@
 				04A073C4235148280042A062 /* KeychainManager.swift */,
 			);
 			path = KeychainManager;
-			sourceTree = "<group>";
-		};
-		04A073C8235148570042A062 /* To+add */ = {
-			isa = PBXGroup;
-			children = (
-				04A073C9235148570042A062 /* RealmMigrationsHelper.swift */,
-				04A073CA235148570042A062 /* EncryptedCredentialsRealm.swift */,
-			);
-			path = "To+add";
 			sourceTree = "<group>";
 		};
 		04E7112E234F53A4003BA780 /* Views */ = {
@@ -280,6 +293,7 @@
 		04FD56002352AB75009420B9 /* EventKitManager */ = {
 			isa = PBXGroup;
 			children = (
+				0402491023546B9800478C74 /* EventsCalendarManager */,
 				04FD56072352AB75009420B9 /* EventKitUtility */,
 			);
 			path = EventKitManager;
@@ -288,7 +302,7 @@
 		04FD56072352AB75009420B9 /* EventKitUtility */ = {
 			isa = PBXGroup;
 			children = (
-				04FD56082352AB75009420B9 /* EKEventStatus.swift */,
+				04FD56082352AB75009420B9 /* EKEventHelperStatus.swift */,
 				04FD56092352AB75009420B9 /* EKEventHelper.swift */,
 				04FD56042352AB75009420B9 /* EventsModel.swift */,
 				04FD56022352AB75009420B9 /* EKEventError.swift */,
@@ -334,7 +348,6 @@
 			isa = PBXGroup;
 			children = (
 				0407F32123084180001E66A0 /* Resources */,
-				04A073C8235148570042A062 /* To+add */,
 				AFC3E6D322CCE6B7005A8829 /* Extension */,
 				0402415623507BBE007A3164 /* Utility */,
 				AFC3E6C622CCD488005A8829 /* Helper */,
@@ -455,6 +468,7 @@
 		AFC3E6D322CCE6B7005A8829 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				0402491C23546C4400478C74 /* DateExtensions */,
 				AFC3E6D422CCE700005A8829 /* UIImageViewExtension.swift */,
 				0407F329230841ED001E66A0 /* ColourExtension.swift */,
 				04D1C9A9230965C3006FD8F7 /* FontExtension.swift */,
@@ -653,6 +667,8 @@
 			inputFileListPaths = (
 			);
 			inputPaths = (
+				"$(SRCROOT)/EmployeeRoster/Utility/EventKitManager/EventKitUtility/EKEventHelper.swift",
+				"$(SRCROOT)/EmployeeRoster/Utility/EventKitManager/EventsCalendarManager/EventsCalendarManager.swift",
 			);
 			name = "Cuckoo Script";
 			outputFileListPaths = (
@@ -661,7 +677,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Define output file. Change \"${PROJECT_DIR}/${PROJECT_NAME}Tests\" to your test's root source folder, if it's not the default name.\nOUTPUT_FILE=\"${PROJECT_DIR}/${PROJECT_NAME}Tests/GeneratedMocks.swift\"\necho \"Generated Mocks File = ${OUTPUT_FILE}\"\n\n# Define input directory. Change \"${PROJECT_DIR}/${PROJECT_NAME}\" to your project's root source folder, if it's not the default name.\nINPUT_DIR=\"${PROJECT_DIR}/${PROJECT_NAME}\"\necho \"Mocks Input Directory = ${INPUT_DIR}\"\n\n# Generate mock files, include as many input files as you'd like to create mocks for.\n\"${PODS_ROOT}/Cuckoo/run\" generate --testable \"${PROJECT_NAME}\" \\\n--output \"${OUTPUT_FILE}\" \\\n\"$INPUT_DIR/Service/WebService/WebServiceProtocol.swift\" \\\n\"$INPUT_DIR/Service/ApiHandler/GetEmployeeInfoHandlerProtocol.swift\" \\\n\"$INPUT_DIR/ViewModel/EmployeeViewModelProtocol.swift\" \\\n\"$INPUT_DIR/Utility/RealmManager/RealmManager.swift\" \\\n\"$INPUT_DIR/Utility/KeychainManager/KeychainManager.swift\"\n\n# After running once, locate `GeneratedMocks.swift` and drag it into your Xcode test target group.\n";
+			shellScript = "# Define output file. Change \"${PROJECT_DIR}/${PROJECT_NAME}Tests\" to your test's root source folder, if it's not the default name.\nOUTPUT_FILE=\"${PROJECT_DIR}/${PROJECT_NAME}Tests/GeneratedMocks.swift\"\necho \"Generated Mocks File = ${OUTPUT_FILE}\"\n\n# Define input directory. Change \"${PROJECT_DIR}/${PROJECT_NAME}\" to your project's root source folder, if it's not the default name.\nINPUT_DIR=\"${PROJECT_DIR}/${PROJECT_NAME}\"\necho \"Mocks Input Directory = ${INPUT_DIR}\"\n\n# Generate mock files, include as many input files as you'd like to create mocks for.\n\"${PODS_ROOT}/Cuckoo/run\" generate --testable \"${PROJECT_NAME}\" \\\n--output \"${OUTPUT_FILE}\" \\\n\"$INPUT_DIR/Service/WebService/WebServiceProtocol.swift\" \\\n\"$INPUT_DIR/Service/ApiHandler/GetEmployeeInfoHandlerProtocol.swift\" \\\n\"$INPUT_DIR/ViewModel/EmployeeViewModelProtocol.swift\" \\\n\"$INPUT_DIR/Utility/RealmManager/RealmManager.swift\" \\\n\"$INPUT_DIR/Utility/KeychainManager/KeychainManager.swift\" \\\n\n# After running once, locate `GeneratedMocks.swift` and drag it into your Xcode test target group.\n";
 		};
 		04E7112B234F5109003BA780 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -793,14 +809,16 @@
 				AFC3E6AF22CCA445005A8829 /* EmployeeRosterVC.swift in Sources */,
 				AFC3E6BC22CCB318005A8829 /* ScheduleModel.swift in Sources */,
 				AF1B099B22CC956D00C5EC90 /* EmployeeRoster.xcdatamodeld in Sources */,
+				0402492123546C4400478C74 /* String+Extension .swift in Sources */,
 				04FD560A2352AB75009420B9 /* EKEventError.swift in Sources */,
-				04FD560F2352AB75009420B9 /* EKEventStatus.swift in Sources */,
+				04FD560F2352AB75009420B9 /* EKEventHelperStatus.swift in Sources */,
 				0407F32A230841ED001E66A0 /* ColourExtension.swift in Sources */,
 				AF1B09C922CC987100C5EC90 /* WebServiceProtocol.swift in Sources */,
-				04A073CC235148570042A062 /* EncryptedCredentialsRealm.swift in Sources */,
+				0402491423546B9800478C74 /* EventsCalendarManager.swift in Sources */,
 				04FD56102352AB75009420B9 /* EKEventHelper.swift in Sources */,
 				AFC3E6BA22CCB2F7005A8829 /* RosterModel.swift in Sources */,
 				04E71131234F53C1003BA780 /* ReusableView.swift in Sources */,
+				0402492023546C4400478C74 /* DateFormatter+Formatters.swift in Sources */,
 				AFC3E6D522CCE700005A8829 /* UIImageViewExtension.swift in Sources */,
 				04E71127234F2E7D003BA780 /* EmployeeSectionModel.swift in Sources */,
 				AFC3E6C322CCD3BF005A8829 /* RosterTableViewCell.swift in Sources */,
@@ -815,6 +833,7 @@
 				04FD560C2352AB75009420B9 /* EventsModel.swift in Sources */,
 				AF1B099322CC956D00C5EC90 /* AppDelegate.swift in Sources */,
 				0448C9782349B36C0082369E /* RealmManager.swift in Sources */,
+				0402492223546C4400478C74 /* Date+Extensions.swift in Sources */,
 				AFC3E6C022CCBDD4005A8829 /* EmployeeViewModelProtocol.swift in Sources */,
 				AFC3E6CB22CCD51C005A8829 /* UIColor+Extension.swift in Sources */,
 				AFC3E6D222CCE0FD005A8829 /* EmployeeDetailCell.swift in Sources */,
@@ -822,7 +841,6 @@
 				AF1B09CD22CC98BF00C5EC90 /* GetEmployeeInfoHandlerProtocol.swift in Sources */,
 				04D1C9AC23096764006FD8F7 /* NavigationControllerExtension.swift in Sources */,
 				04F0B40D234C360F003819B7 /* RealmEmployee.swift in Sources */,
-				04A073CB235148570042A062 /* RealmMigrationsHelper.swift in Sources */,
 				04F0B40F234C3662003819B7 /* RealmSchedule.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

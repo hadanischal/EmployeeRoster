@@ -11,7 +11,7 @@ import RxSwift
 import EventKit
 
 protocol EKEventHelperDataSource {
-    var authorizationStatus: Single<EKEventStatus> { get }
+    var authorizationStatus: Single<EKEventHelperStatus> { get }
     var requestAccess: Single<Bool> { get }
 }
 
@@ -24,8 +24,8 @@ struct EKEventHelper: EKEventHelperDataSource {
     }
 
     // Get Calendar auth status
-    var authorizationStatus: Single<EKEventStatus> {
-        return Single<EKEventStatus>.create { single in
+    var authorizationStatus: Single<EKEventHelperStatus> {
+        return Single<EKEventHelperStatus>.create { single in
             let authStatus = self.getAuthorizationStatus()
             switch authStatus {
             case .notDetermined:
