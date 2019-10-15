@@ -17,12 +17,13 @@ protocol EventsCalendarManagerDataSource {
 
 class EventsCalendarManager: NSObject, EventsCalendarManagerDataSource {
 
-    var eventStore: EKEventStore!
+    private var eventStore: EKEventStore!
     private var eventHelper: EKEventHelperDataSource!
 
-    init(withEKEventHelper eventHelper: EKEventHelperDataSource = EKEventHelper()) {
+    init(withEKEventHelper eventHelper: EKEventHelperDataSource = EKEventHelper(),
+         withEventStore eventStore: EKEventStore = EKEventStore()) {
         self.eventHelper = eventHelper
-        eventStore = EKEventStore()
+        self.eventStore = eventStore
     }
 
     // Check Calendar permissions auth status
