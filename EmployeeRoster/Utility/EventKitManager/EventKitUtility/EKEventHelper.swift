@@ -17,10 +17,10 @@ protocol EKEventHelperDataSource {
 
 struct EKEventHelper: EKEventHelperDataSource {
 
-    var eventStore: EKEventStore!
+    private var eventStore: EKEventStore!
 
-    init() {
-        eventStore = EKEventStore()
+    init(withEKEventStore eventStore: EKEventStore = EKEventStore()) {
+        self.eventStore = eventStore
     }
 
     // Get Calendar auth status

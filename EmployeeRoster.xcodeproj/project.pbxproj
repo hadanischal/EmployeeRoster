@@ -16,6 +16,9 @@
 		0407F32823084190001E66A0 /* GothamRounded-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0407F32523084190001E66A0 /* GothamRounded-Light.otf */; };
 		0407F32A230841ED001E66A0 /* ColourExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0407F329230841ED001E66A0 /* ColourExtension.swift */; };
 		0448C9782349B36C0082369E /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0448C9772349B36C0082369E /* RealmManager.swift */; };
+		0493B41F2355BA2B001CC190 /* UIAlertController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0493B41C2355BA2B001CC190 /* UIAlertController+Extension.swift */; };
+		0493B4202355BA2B001CC190 /* AlertAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0493B41D2355BA2B001CC190 /* AlertAction.swift */; };
+		0493B4212355BA2B001CC190 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0493B41E2355BA2B001CC190 /* UIViewController+Extension.swift */; };
 		04A073BF235082060042A062 /* RealmManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A073BE235082060042A062 /* RealmManagerTests.swift */; };
 		04A073C2235141CD0042A062 /* MockError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A073C1235141CD0042A062 /* MockError.swift */; };
 		04A073C5235148280042A062 /* KeychainManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A073C4235148280042A062 /* KeychainManager.swift */; };
@@ -96,6 +99,9 @@
 		0407F32523084190001E66A0 /* GothamRounded-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GothamRounded-Light.otf"; sourceTree = "<group>"; };
 		0407F329230841ED001E66A0 /* ColourExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColourExtension.swift; sourceTree = "<group>"; };
 		0448C9772349B36C0082369E /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
+		0493B41C2355BA2B001CC190 /* UIAlertController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Extension.swift"; sourceTree = "<group>"; };
+		0493B41D2355BA2B001CC190 /* AlertAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertAction.swift; sourceTree = "<group>"; };
+		0493B41E2355BA2B001CC190 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		04A073BE235082060042A062 /* RealmManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManagerTests.swift; sourceTree = "<group>"; };
 		04A073C1235141CD0042A062 /* MockError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockError.swift; sourceTree = "<group>"; };
 		04A073C4235148280042A062 /* KeychainManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainManager.swift; sourceTree = "<group>"; };
@@ -193,6 +199,8 @@
 		0402415623507BBE007A3164 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				AFC3E6D322CCE6B7005A8829 /* Extension */,
+				0493B41B2355BA2B001CC190 /* AlertControllerExtension */,
 				04FD56002352AB75009420B9 /* EventKitManager */,
 				04A073C3235148280042A062 /* KeychainManager */,
 				0448C9742349B0550082369E /* RealmManager */,
@@ -242,6 +250,16 @@
 				0448C9772349B36C0082369E /* RealmManager.swift */,
 			);
 			path = RealmManager;
+			sourceTree = "<group>";
+		};
+		0493B41B2355BA2B001CC190 /* AlertControllerExtension */ = {
+			isa = PBXGroup;
+			children = (
+				0493B41C2355BA2B001CC190 /* UIAlertController+Extension.swift */,
+				0493B41D2355BA2B001CC190 /* AlertAction.swift */,
+				0493B41E2355BA2B001CC190 /* UIViewController+Extension.swift */,
+			);
+			path = AlertControllerExtension;
 			sourceTree = "<group>";
 		};
 		04A073C3235148280042A062 /* KeychainManager */ = {
@@ -348,7 +366,6 @@
 			isa = PBXGroup;
 			children = (
 				0407F32123084180001E66A0 /* Resources */,
-				AFC3E6D322CCE6B7005A8829 /* Extension */,
 				0402415623507BBE007A3164 /* Utility */,
 				AFC3E6C622CCD488005A8829 /* Helper */,
 				AFC3E6AC22CCA3EE005A8829 /* Model */,
@@ -807,6 +824,7 @@
 				04FD56222352D6B5009420B9 /* Bundle+Extension.swift in Sources */,
 				AF1B09CB22CC988300C5EC90 /* WebService.swift in Sources */,
 				AFC3E6AF22CCA445005A8829 /* EmployeeRosterVC.swift in Sources */,
+				0493B4202355BA2B001CC190 /* AlertAction.swift in Sources */,
 				AFC3E6BC22CCB318005A8829 /* ScheduleModel.swift in Sources */,
 				AF1B099B22CC956D00C5EC90 /* EmployeeRoster.xcdatamodeld in Sources */,
 				0402492123546C4400478C74 /* String+Extension .swift in Sources */,
@@ -820,6 +838,7 @@
 				04E71131234F53C1003BA780 /* ReusableView.swift in Sources */,
 				0402492023546C4400478C74 /* DateFormatter+Formatters.swift in Sources */,
 				AFC3E6D522CCE700005A8829 /* UIImageViewExtension.swift in Sources */,
+				0493B4212355BA2B001CC190 /* UIViewController+Extension.swift in Sources */,
 				04E71127234F2E7D003BA780 /* EmployeeSectionModel.swift in Sources */,
 				AFC3E6C322CCD3BF005A8829 /* RosterTableViewCell.swift in Sources */,
 				04D1C9AA230965C3006FD8F7 /* FontExtension.swift in Sources */,
@@ -829,6 +848,7 @@
 				04E7112D234F536B003BA780 /* UITableView+Extensions.swift in Sources */,
 				AF1B09C522CC981800C5EC90 /* GetEmployeeInfoHandler.swift in Sources */,
 				AF1B099522CC956D00C5EC90 /* ViewController.swift in Sources */,
+				0493B41F2355BA2B001CC190 /* UIAlertController+Extension.swift in Sources */,
 				04A073C5235148280042A062 /* KeychainManager.swift in Sources */,
 				04FD560C2352AB75009420B9 /* EventsModel.swift in Sources */,
 				AF1B099322CC956D00C5EC90 /* AppDelegate.swift in Sources */,
