@@ -11,7 +11,7 @@ import RxSwift
 import RxCocoa
 import CocoaLumberjack
 
-class EmployeeRosterVC: UIViewController {
+final class EmployeeRosterVC: UIViewController {
     @IBOutlet weak var tableView: UITableView?
     var activityIndicator: ActivityIndicator? = ActivityIndicator()
 
@@ -47,16 +47,40 @@ class EmployeeRosterVC: UIViewController {
             .subscribe(onNext: { [weak self] result in
                 self?.employeeList = result
                 self?.tableView?.reloadData()
-            }, onError: { error in
-                DDLogError("onError: \(error)")
+                }, onError: { error in
+                    DDLogError("onError: \(error)")
             }).disposed(by: disposeBag)
 
         viewModel
             .errorResult
-            .subscribe(onNext: { error in
-                DDLogError("onError: \(error)")
+            .observeOn(MainScheduler.instance)
+            .subscribe(onNext: { [weak self] error in
+                self?.showAlertView(withTitle: error.localizedDescription, andMessage: (error as? EKEventError)?.recoverySuggestion)
+            }).disposed(by: disposeBag)
+
+        viewModel
+            .openSettings
+            .observeOn(MainScheduler.instance)
+            .flatMap({ [weak self] result -> Observable<Int> in
+                let (title, message) = result
+                return self?.alertCalenderAccessNeeded(title, message) ?? Observable.empty()
             })
-            .disposed(by: disposeBag)
+            .subscribe(onNext: { index in
+                print ("index: \(index)")
+                if index == 0 {
+                    let settingsAppURL = URL(string: UIApplication.openSettingsURLString)!
+                    UIApplication.shared.open(settingsAppURL)
+                }
+                self.dismiss(animated: true)
+            }).disposed(by: disposeBag)
+        
+        viewModel
+            .eventAddedToCalendar
+            .observeOn(MainScheduler.instance)
+            .subscribe(onNext: { [weak self] result in
+                let (title, message) = result
+                self?.showAlertView(withTitle: title, andMessage: message)
+            }).disposed(by: disposeBag)
 
         buttonRefresh.rx.tap
             .subscribe(onNext: { [weak self] _ in
@@ -65,6 +89,14 @@ class EmployeeRosterVC: UIViewController {
 
         viewModel.getRosterInfoFromDB()
         viewModel.getRosterInfo()
+    }
+
+    private func alertCalenderAccessNeeded(_ title: String, _ message: String) -> Observable<Int> {
+        return self.alert(title: title,
+                          message: message,
+            actions: [AlertAction(title: "Settings", type: 0, style: .default),
+                      AlertAction(title: "Cancel", type: 1, style: .destructive)],
+            viewController: self)
     }
 }
 
@@ -81,7 +113,7 @@ extension EmployeeRosterVC: UITableViewDataSource, UITableViewDelegate {
         }
     }
 
-     func numberOfSections(in tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         return self.employeeList != nil ? 2 : 0
     }
 
@@ -118,5 +150,10 @@ extension EmployeeRosterVC: UITableViewDataSource, UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         DDLogInfo("tapped")
+        guard let roster = self.employeeList?.roster else {
+            return
+        }
+        let dataValue = roster[indexPath.row]
+        viewModel.addEventToCalendar(withRosterModel: dataValue)
     }
 }

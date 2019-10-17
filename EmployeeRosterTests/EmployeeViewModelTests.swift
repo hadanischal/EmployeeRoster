@@ -21,6 +21,8 @@ class EmployeeViewModelTests: QuickSpec {
         var testViewModel: EmployeeViewModel!
         var mockGetEmployeeInfo: MockGetEmployeeInfoHandlerProtocol!
         var mockRealmManager: MockRealmManagerDataSource!
+        var mockEventsCalendarManager: MockEventsCalendarManagerDataSource!
+
         var testScheduler: TestScheduler!
         let employeeModel: EmployeeModel = MockData().stubEmployeeModel() ?? EmployeeModel.empty
 
@@ -36,6 +38,12 @@ class EmployeeViewModelTests: QuickSpec {
                 stub(mockRealmManager) { stub in
                     when(stub.fetchEmployeeInfo()).thenReturn(Single.just(employeeModel))
                     when(stub.saveEmployeeInfo(withInfo: any())).thenReturn(Completable.empty())
+                }
+
+                mockEventsCalendarManager = MockEventsCalendarManagerDataSource()
+                stub(mockEventsCalendarManager) { stub in
+                    when(stub.addEventToCalendar(event: any())).thenReturn(Completable.empty())
+                    when(stub.presentCalendarModalToAddEvent(event: any())).thenReturn(Completable.empty())
                 }
 
                 testViewModel = EmployeeViewModel(withGetWeather: mockGetEmployeeInfo, withRealmManager: mockRealmManager)
