@@ -14,6 +14,7 @@ target 'EmployeeRoster' do
   pod 'RealmSwift'
   pod 'KeychainAccess'
   pod 'CocoaLumberjack/Swift'
+  pod 'OHHTTPStubs/Swift'
 
   target 'EmployeeRosterTests' do
     inherit! :search_paths

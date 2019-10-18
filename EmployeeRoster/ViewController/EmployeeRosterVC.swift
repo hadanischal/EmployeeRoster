@@ -13,12 +13,11 @@ import CocoaLumberjack
 
 final class EmployeeRosterVC: UIViewController {
     @IBOutlet weak var tableView: UITableView?
-    var activityIndicator: ActivityIndicator? = ActivityIndicator()
 
     @IBOutlet weak var buttonRefresh: UIBarButtonItem!
-    private let disposeBag = DisposeBag()
-    var viewModel: EmployeeViewModelProtocol!
+    private var viewModel: EmployeeViewModelProtocol!
     private var employeeList: EmployeeModel?
+    private let disposeBag = DisposeBag()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,27 +26,31 @@ final class EmployeeRosterVC: UIViewController {
         self.viewModelSetUp()
     }
 
-    func setupUI() {
+    private func setupUI() {
         self.navigationItem.title = "Roster"
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationController?.setCustomStyle()
         self.view.backgroundColor = UIColor.white
     }
 
-    func setupTableView() {
+    private func setupTableView() {
         self.tableView?.backgroundColor = UIColor.tableViewBackgroundColor
         self.view.backgroundColor = UIColor.tableViewBackgroundColor
         self.tableView?.tableFooterView = UIView(frame: CGRect.zero)
     }
 
-    func viewModelSetUp() {
+    private func viewModelSetUp() {
         viewModel = EmployeeViewModel()
+
+        self.createSpinnerView()
         viewModel.employeeResult
             .observeOn(MainScheduler.instance)
             .subscribe(onNext: { [weak self] result in
+                self?.removeSpinnerView()
                 self?.employeeList = result
                 self?.tableView?.reloadData()
-                }, onError: { error in
+                }, onError: { [weak self] error in
+                    self?.removeSpinnerView()
                     DDLogError("onError: \(error)")
             }).disposed(by: disposeBag)
 
@@ -62,18 +65,13 @@ final class EmployeeRosterVC: UIViewController {
             .openSettings
             .observeOn(MainScheduler.instance)
             .flatMap({ [weak self] result -> Observable<Int> in
-                let (title, message) = result
-                return self?.alertCalenderAccessNeeded(title, message) ?? Observable.empty()
+                return self?.alertCalenderAccessNeeded(result.0, result.1) ?? Observable.empty()
             })
-            .subscribe(onNext: { index in
-                print ("index: \(index)")
-                if index == 0 {
-                    let settingsAppURL = URL(string: UIApplication.openSettingsURLString)!
-                    UIApplication.shared.open(settingsAppURL)
-                }
-                self.dismiss(animated: true)
+            .subscribe(onNext: { [weak self] index in
+                index == 0 ? self?.openSettingsAppURL() : ()
+                self?.dismiss(animated: true)
             }).disposed(by: disposeBag)
-        
+
         viewModel
             .eventAddedToCalendar
             .observeOn(MainScheduler.instance)
@@ -89,6 +87,11 @@ final class EmployeeRosterVC: UIViewController {
 
         viewModel.getRosterInfoFromDB()
         viewModel.getRosterInfo()
+    }
+
+    private func openSettingsAppURL() {
+        let settingsAppURL = URL(string: UIApplication.openSettingsURLString)!
+        UIApplication.shared.open(settingsAppURL)
     }
 
     private func alertCalenderAccessNeeded(_ title: String, _ message: String) -> Observable<Int> {

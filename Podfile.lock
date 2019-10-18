@@ -6,6 +6,19 @@ PODS:
   - Cuckoo (1.0.6)
   - KeychainAccess (3.2.0)
   - Nimble (8.0.2)
+  - OHHTTPStubs/Core (8.0.0)
+  - OHHTTPStubs/Default (8.0.0):
+    - OHHTTPStubs/Core
+    - OHHTTPStubs/JSON
+    - OHHTTPStubs/NSURLSession
+    - OHHTTPStubs/OHPathHelpers
+  - OHHTTPStubs/JSON (8.0.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/NSURLSession (8.0.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/OHPathHelpers (8.0.0)
+  - OHHTTPStubs/Swift (8.0.0):
+    - OHHTTPStubs/Default
   - Quick (2.1.0)
   - Realm (3.17.3):
     - Realm/Headers (= 3.17.3)
@@ -35,6 +48,7 @@ DEPENDENCIES:
   - Cuckoo (~> 1.0.6)
   - KeychainAccess
   - Nimble (~> 8)
+  - OHHTTPStubs/Swift
   - Quick (~> 2.1.0)
   - RealmSwift
   - RxAlamofire
@@ -62,6 +76,7 @@ SPEC REPOS:
     - SwiftLint
   trunk:
     - KeychainAccess
+    - OHHTTPStubs
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
@@ -69,6 +84,7 @@ SPEC CHECKSUMS:
   Cuckoo: 8074fc309159c4862665b83798f5ad03e061e8bd
   KeychainAccess: 3b1bf8a77eb4c6ea1ce9404c292e48f948954c6b
   Nimble: 622629381bda1dd5678162f21f1368cec7cbba60
+  OHHTTPStubs: 9cbce6364bec557cc3439aa6bb7514670d780881
   Quick: 4be43f6634acfa727dd106bdf3929ce125ffa79d
   Realm: 5a1d9d47bfc101dd597668b1a8af4288a2557f6d
   RealmSwift: b7fdc2d18616621c31df5c7a398a45a2163f8eb0
@@ -80,6 +96,6 @@ SPEC CHECKSUMS:
   RxTest: 4349afe98f564e0a9bc19063368904622d17d49a
   SwiftLint: fed9c66336e41fc74dc48a73678380718f0c8b0e
 
-PODFILE CHECKSUM: f4759ee7a140fd3f097ebca8bec1932c1bd290d0
+PODFILE CHECKSUM: c87153fbdbc7d0d83ae0f4f75a7de8aa88718dc5
 
 COCOAPODS: 1.8.3
