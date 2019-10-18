@@ -9,6 +9,7 @@
 import Foundation
 import RxSwift
 import Alamofire
+import CocoaLumberjack
 
 struct Resource {
     let url: URL
@@ -29,9 +30,14 @@ class WebService: WebServiceProtocol {
                     print("response:", response)
                     switch response.result {
                     case .success(let value):
+                        let json = try? JSONSerialization.jsonObject(with: response.result.value!) as? [String: Any]
+                        DDLogInfo("success response: \(json ?? [:])")
+
                         observer.on(.next(value))
                         observer.on(.completed)
                     case .failure(let error):
+                        DDLogError("failure Error: \(error)")
+
                         observer.on(.error(error))
                     }
                 })
