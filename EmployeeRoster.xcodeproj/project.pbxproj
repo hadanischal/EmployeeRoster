@@ -19,6 +19,9 @@
 		045480C423589143000D6BA7 /* SpinnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045480C323589143000D6BA7 /* SpinnerViewController.swift */; };
 		045480C6235891A7000D6BA7 /* SpinnerViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045480C5235891A7000D6BA7 /* SpinnerViewController+Extension.swift */; };
 		045480C8235895E5000D6BA7 /* WebServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045480C7235895E5000D6BA7 /* WebServiceTests.swift */; };
+		048EB042235A79F400AFF8B0 /* MockEKEventStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048EB03F235A79F300AFF8B0 /* MockEKEventStore.swift */; };
+		048EB043235A79F400AFF8B0 /* EventsCalendarManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048EB040235A79F300AFF8B0 /* EventsCalendarManagerTests.swift */; };
+		048EB044235A79F400AFF8B0 /* EKEventHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048EB041235A79F300AFF8B0 /* EKEventHelperTests.swift */; };
 		0493B41F2355BA2B001CC190 /* UIAlertController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0493B41C2355BA2B001CC190 /* UIAlertController+Extension.swift */; };
 		0493B4202355BA2B001CC190 /* AlertAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0493B41D2355BA2B001CC190 /* AlertAction.swift */; };
 		0493B4212355BA2B001CC190 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0493B41E2355BA2B001CC190 /* UIViewController+Extension.swift */; };
@@ -105,6 +108,9 @@
 		045480C323589143000D6BA7 /* SpinnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerViewController.swift; sourceTree = "<group>"; };
 		045480C5235891A7000D6BA7 /* SpinnerViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SpinnerViewController+Extension.swift"; sourceTree = "<group>"; };
 		045480C7235895E5000D6BA7 /* WebServiceTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebServiceTests.swift; sourceTree = "<group>"; };
+		048EB03F235A79F300AFF8B0 /* MockEKEventStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockEKEventStore.swift; sourceTree = "<group>"; };
+		048EB040235A79F300AFF8B0 /* EventsCalendarManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsCalendarManagerTests.swift; sourceTree = "<group>"; };
+		048EB041235A79F300AFF8B0 /* EKEventHelperTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EKEventHelperTests.swift; sourceTree = "<group>"; };
 		0493B41C2355BA2B001CC190 /* UIAlertController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Extension.swift"; sourceTree = "<group>"; };
 		0493B41D2355BA2B001CC190 /* AlertAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertAction.swift; sourceTree = "<group>"; };
 		0493B41E2355BA2B001CC190 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
@@ -268,6 +274,16 @@
 			path = SpinnerViewController;
 			sourceTree = "<group>";
 		};
+		048EB03E235A79F300AFF8B0 /* EventKitManagerTests */ = {
+			isa = PBXGroup;
+			children = (
+				048EB03F235A79F300AFF8B0 /* MockEKEventStore.swift */,
+				048EB040235A79F300AFF8B0 /* EventsCalendarManagerTests.swift */,
+				048EB041235A79F300AFF8B0 /* EKEventHelperTests.swift */,
+			);
+			path = EventKitManagerTests;
+			sourceTree = "<group>";
+		};
 		0493B41B2355BA2B001CC190 /* AlertControllerExtension */ = {
 			isa = PBXGroup;
 			children = (
@@ -403,6 +419,7 @@
 		AF1B09A922CC956E00C5EC90 /* EmployeeRosterTests */ = {
 			isa = PBXGroup;
 			children = (
+				048EB03E235A79F300AFF8B0 /* EventKitManagerTests */,
 				AFFD7BC422D1C2440075A006 /* GeneratedMocks.swift */,
 				04A073C1235141CD0042A062 /* MockError.swift */,
 				AF25A28A22D36A3E001183F9 /* employee.json */,
@@ -895,9 +912,12 @@
 				AF1B09AB22CC956E00C5EC90 /* EmployeeRosterTests.swift in Sources */,
 				AFFD7BC522D1C2440075A006 /* GeneratedMocks.swift in Sources */,
 				04A073C72351483E0042A062 /* KeychainManagerTests.swift in Sources */,
+				048EB042235A79F400AFF8B0 /* MockEKEventStore.swift in Sources */,
+				048EB043235A79F400AFF8B0 /* EventsCalendarManagerTests.swift in Sources */,
 				AF25A28D22D36AC0001183F9 /* MockData.swift in Sources */,
 				045480C8235895E5000D6BA7 /* WebServiceTests.swift in Sources */,
 				04A073C2235141CD0042A062 /* MockError.swift in Sources */,
+				048EB044235A79F400AFF8B0 /* EKEventHelperTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
