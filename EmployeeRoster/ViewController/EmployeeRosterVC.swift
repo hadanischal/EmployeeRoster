@@ -138,15 +138,12 @@ extension EmployeeRosterVC: UITableViewDataSource, UITableViewDelegate {
         switch employeeSection {
         case .header:
             let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as RosterTableViewCell
-            cell.dataValue = self.employeeList?.scheduledToday
+            cell.configure(self.employeeList?.scheduledToday)
             return cell
 
         default:
             let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as EmployeeDetailCell
-            guard let roster = self.employeeList?.roster else {
-                return cell
-            }
-            cell.dataValue = roster[indexPath.row]
+            cell.configure(self.employeeList?.roster?[indexPath.row])
             return cell
         }
     }
