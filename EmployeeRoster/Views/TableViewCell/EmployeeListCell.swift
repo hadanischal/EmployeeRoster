@@ -12,20 +12,15 @@ class EmployeeListCell: UITableViewCell {
     @IBOutlet var titleLabel: UILabel?
     @IBOutlet var detailLabel: UILabel?
 
-    var dataValue: RosterModel? {
-        didSet {
-            guard let data = dataValue else {
-                return
-            }
-            titleLabel?.text = data.name
-            detailLabel?.text = data.fromDate
-        }
-    }
-
     override func awakeFromNib() {
         super.awakeFromNib()
         titleLabel?.font = .body1
         detailLabel?.font = .body2
     }
 
+    func configure(_ rosterModel: RosterModel?) {
+        guard let data = rosterModel else { return }
+        titleLabel?.text = data.name
+        detailLabel?.text = data.fromDate
+    }
 }

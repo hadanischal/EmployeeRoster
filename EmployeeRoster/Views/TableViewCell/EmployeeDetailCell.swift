@@ -14,19 +14,6 @@ class EmployeeDetailCell: UITableViewCell {
     @IBOutlet weak var startDateLabel: UILabel!
     @IBOutlet weak var endDateLabel: UILabel!
     @IBOutlet weak var profileImage: UIImageView!
-    private let imageUrl = "https://i.pravatar.cc/300"
-
-    var dataValue: RosterModel? {
-        didSet {
-            guard let data = dataValue else {
-                return
-            }
-            nameLabel?.text = data.name
-            startDateLabel?.text = "Start Date: \(data.fromDate ?? "")"
-            endDateLabel?.text = "End date:\(data.toDate ?? "")"
-            profileImage?.imageFromUrl(urlString: imageUrl)
-        }
-    }
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -37,5 +24,13 @@ class EmployeeDetailCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+    }
+
+    func configure(_ rosterModel: RosterModel?) {
+        guard let data = rosterModel else { return }
+        nameLabel?.text = data.name
+        startDateLabel?.text = "Start Date: \(data.fromDate ?? "")"
+        endDateLabel?.text = "End date:\(data.toDate ?? "")"
+        profileImage?.setImage(withName: data.name ?? "")
     }
 }

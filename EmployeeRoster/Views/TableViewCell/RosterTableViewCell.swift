@@ -15,18 +15,6 @@ class RosterTableViewCell: UITableViewCell {
     @IBOutlet var photoImageView: UIImageView?
     private let imageUrl = "https://picsum.photos/1920/1080?random"
 
-    var dataValue: ScheduleModel? {
-        didSet {
-            guard let data = dataValue else {
-                return
-            }
-            nameLabel?.text = data.name
-            startDateLabel?.text = "Start Date: \(data.fromDate ?? "")"
-            endDateLabel?.text = "End date:\(data.toDate ?? "")"
-            photoImageView?.imageFromUrl(urlString: imageUrl)
-        }
-    }
-
     override func awakeFromNib() {
         super.awakeFromNib()
         nameLabel?.textColor = UIColor.white
@@ -36,7 +24,14 @@ class RosterTableViewCell: UITableViewCell {
         nameLabel?.font = .heading1
         startDateLabel?.font = .body1
         endDateLabel?.font = .body2
-
         self.photoImageView?.contentMode =   UIView.ContentMode.scaleAspectFill
+    }
+
+    func configure(_ scheduleValue: ScheduleModel?) {
+        guard let data = scheduleValue else { return }
+        nameLabel?.text = data.name
+        startDateLabel?.text = "Start Date: \(data.fromDate ?? "")"
+        endDateLabel?.text = "End date:\(data.toDate ?? "")"
+        photoImageView?.imageFromUrl(urlString: imageUrl)
     }
 }
