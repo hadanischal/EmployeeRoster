@@ -15,6 +15,7 @@ target 'EmployeeRoster' do
   pod 'KeychainAccess'
   pod 'CocoaLumberjack/Swift'
   pod 'OHHTTPStubs/Swift'
+  pod 'SwiftGen', '~> 6.0'
 
   target 'EmployeeRosterTests' do
     inherit! :search_paths

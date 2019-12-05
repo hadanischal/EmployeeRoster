@@ -1,0 +1,20 @@
+cyan               : #A3D1DA
+caparol            : #1C1C1C
+darkCharcoal       : #333333
+charcoal70         : #50595B
+charcoal66         : #666666
+charcoal99         : #999999
+caribbeanBlue      : #1FBCD2
+shadeMagenta       : #EAE8EA
+
+neon100            : #01FFFF
+redEnergy100       : #D0021B
+strikingYellow100  : #FFF572
+
+darkRed          : #D93D5A
+coral  : #F46F60 
+whiteSmoke  : #F5F5F5
+grayChateau  : #A3A4A8
+lightSilver         : #d8d8d8
+turquoiseSurf         : #00c5cd
+candyAppleRed         : #f70d1a
