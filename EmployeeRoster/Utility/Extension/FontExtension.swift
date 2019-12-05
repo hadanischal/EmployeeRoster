@@ -10,13 +10,13 @@ import UIKit
 
 extension UIFont {
     class func boldFont(size: CGFloat) -> UIFont {
-        return UIFont(name: "GothamRounded-Bold", size: size)!
+        return UIFont(font: FontFamily.GothamRounded.bold, size: size)!
     }
     class func regularFont(size: CGFloat) -> UIFont {
-        return UIFont(name: "GothamRounded-Medium", size: size)!
+        return UIFont(font: FontFamily.GothamRounded.medium, size: size)!
     }
     class func lightFont(size: CGFloat) -> UIFont {
-        return UIFont(name: "GothamRounded-Light", size: size)!
+        return UIFont(font: FontFamily.GothamRounded.light, size: size)!
     }
 }
 
@@ -48,5 +48,7 @@ extension UIFont {
     static var detailBody: UIFont {
         return .regularFont(size: 24)
     }
-
+    static var imageTitle: UIFont {
+        return .boldFont(size: 40)
+    }
 }

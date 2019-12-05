@@ -5,40 +5,78 @@
 //  Created by Nischal Hada on 7/3/19.
 //  Copyright © 2019 NischalHada. All rights reserved.
 //
+//swiftlint:disable all
 
 import UIKit
 
 extension UIColor {
-
+    
     static var primaryLight: UIColor {
-        return UIColor(red: 163/255, green: 209/255, blue: 218/255, alpha: 1)
+        return ColorName.cyan.color
     }
-
+    
     static var darkText: UIColor {
-        return UIColor(red: 28/255, green: 28/255, blue: 28/255, alpha: 1)
+        return ColorName.caparol.color
     }
-
+    
     static var text: UIColor {
-        return UIColor(red: 51/255, green: 51/255, blue: 51/255, alpha: 1)
+        return ColorName.darkCharcoal.color
     }
-
+    
     static var lightText: UIColor {
-        return UIColor(red: 102/255, green: 102/255, blue: 102/255, alpha: 1)
+        return ColorName.charcoal66.color
     }
-
+    
     static var extraLightText: UIColor {
-        return UIColor(red: 153/255, green: 153/255, blue: 153/255, alpha: 1)
+        return ColorName.charcoal99.color
     }
-
+    
     static var buttonBackgroundColor: UIColor {
-        return UIColor(red: 0.122, green: 0.737, blue: 0.824, alpha: 1.00)
+        return ColorName.caribbeanBlue.color
     }
-
+    
     static var tableViewBackgroundColor: UIColor {
-        return UIColor(red: 0.918, green: 0.910, blue: 0.918, alpha: 1.00)
+        return ColorName.shadeMagenta.color
     }
-
+    
     static var contentViewBackgroundColor: UIColor {
-        return UIColor(red: 0.918, green: 0.910, blue: 0.918, alpha: 1.00)
+        return ColorName.shadeMagenta.color
     }
+    
+    static var imageBackgroundColor: UIColor {
+        return ColorName.coral.color
+    }
+}
+
+extension UIColor {
+    
+    // MARK: - Computed Properties
+    
+    var toHex: String? {
+        return toHex()
+    }
+    
+    // MARK: - From UIColor to String
+    
+    func toHex(alpha: Bool = false) -> String? {
+        guard let components = cgColor.components, components.count >= 3 else {
+            return nil
+        }
+        
+        let r = Float(components[0])
+        let g = Float(components[1])
+        let b = Float(components[2])
+        var a = Float(1.0)
+        
+        if components.count >= 4 {
+            a = Float(components[3])
+        }
+        
+        if alpha {
+            return String(format: "%02lX%02lX%02lX%02lX", lroundf(r * 255), lroundf(g * 255), lroundf(b * 255), lroundf(a * 255))
+        } else {
+            return String(format: "%02lX%02lX%02lX", lroundf(r * 255), lroundf(g * 255), lroundf(b * 255))
+        }
+    }
+    
 }
