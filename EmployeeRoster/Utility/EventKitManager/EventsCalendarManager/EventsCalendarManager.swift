@@ -9,6 +9,7 @@
 import UIKit
 import EventKitUI
 import RxSwift
+import EventStoreHelperRx
 
 protocol EventsCalendarManagerDataSource {
     func addEventToCalendar(event: EventsModel) -> Completable

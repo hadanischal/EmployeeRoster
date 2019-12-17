@@ -10,6 +10,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 import CocoaLumberjack
+import EventStoreHelperRx
 
 final class EmployeeRosterVC: UIViewController {
     @IBOutlet weak var tableView: UITableView?

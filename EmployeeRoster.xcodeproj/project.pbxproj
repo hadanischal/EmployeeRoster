@@ -35,6 +35,7 @@
 		048EB042235A79F400AFF8B0 /* MockEKEventStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048EB03F235A79F300AFF8B0 /* MockEKEventStore.swift */; };
 		048EB043235A79F400AFF8B0 /* EventsCalendarManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048EB040235A79F300AFF8B0 /* EventsCalendarManagerTests.swift */; };
 		048EB044235A79F400AFF8B0 /* EKEventHelperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048EB041235A79F300AFF8B0 /* EKEventHelperTests.swift */; };
+		048FF23E23A1D43A00FFE1AD /* EventsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 048FF23A23A1D43A00FFE1AD /* EventsModel.swift */; };
 		0493B41F2355BA2B001CC190 /* UIAlertController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0493B41C2355BA2B001CC190 /* UIAlertController+Extension.swift */; };
 		0493B4202355BA2B001CC190 /* AlertAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0493B41D2355BA2B001CC190 /* AlertAction.swift */; };
 		0493B4212355BA2B001CC190 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0493B41E2355BA2B001CC190 /* UIViewController+Extension.swift */; };
@@ -50,10 +51,6 @@
 		04F0B40D234C360F003819B7 /* RealmEmployee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F0B40C234C360F003819B7 /* RealmEmployee.swift */; };
 		04F0B40F234C3662003819B7 /* RealmSchedule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F0B40E234C3662003819B7 /* RealmSchedule.swift */; };
 		04F0B411234C366F003819B7 /* RealmRoster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F0B410234C366F003819B7 /* RealmRoster.swift */; };
-		04FD560A2352AB75009420B9 /* EKEventError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FD56022352AB75009420B9 /* EKEventError.swift */; };
-		04FD560C2352AB75009420B9 /* EventsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FD56042352AB75009420B9 /* EventsModel.swift */; };
-		04FD560F2352AB75009420B9 /* EKEventHelperStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FD56082352AB75009420B9 /* EKEventHelperStatus.swift */; };
-		04FD56102352AB75009420B9 /* EKEventHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FD56092352AB75009420B9 /* EKEventHelper.swift */; };
 		04FD56222352D6B5009420B9 /* Bundle+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04FD56212352D6B5009420B9 /* Bundle+Extension.swift */; };
 		221BAC8A917539156B432BE5 /* Pods_EmployeeRosterTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 92F8AFB9E85A1A40857DFB7A /* Pods_EmployeeRosterTests.framework */; };
 		5C8A22A50C1223F5240D6115 /* Pods_EmployeeRoster.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E10E2C90F94CECE929E91EA4 /* Pods_EmployeeRoster.framework */; };
@@ -137,6 +134,7 @@
 		048EB03F235A79F300AFF8B0 /* MockEKEventStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockEKEventStore.swift; sourceTree = "<group>"; };
 		048EB040235A79F300AFF8B0 /* EventsCalendarManagerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsCalendarManagerTests.swift; sourceTree = "<group>"; };
 		048EB041235A79F300AFF8B0 /* EKEventHelperTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EKEventHelperTests.swift; sourceTree = "<group>"; };
+		048FF23A23A1D43A00FFE1AD /* EventsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsModel.swift; sourceTree = "<group>"; };
 		0493B41C2355BA2B001CC190 /* UIAlertController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Extension.swift"; sourceTree = "<group>"; };
 		0493B41D2355BA2B001CC190 /* AlertAction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlertAction.swift; sourceTree = "<group>"; };
 		0493B41E2355BA2B001CC190 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
@@ -152,10 +150,6 @@
 		04F0B40C234C360F003819B7 /* RealmEmployee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmEmployee.swift; sourceTree = "<group>"; };
 		04F0B40E234C3662003819B7 /* RealmSchedule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmSchedule.swift; sourceTree = "<group>"; };
 		04F0B410234C366F003819B7 /* RealmRoster.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmRoster.swift; sourceTree = "<group>"; };
-		04FD56022352AB75009420B9 /* EKEventError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EKEventError.swift; sourceTree = "<group>"; };
-		04FD56042352AB75009420B9 /* EventsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventsModel.swift; sourceTree = "<group>"; };
-		04FD56082352AB75009420B9 /* EKEventHelperStatus.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EKEventHelperStatus.swift; sourceTree = "<group>"; };
-		04FD56092352AB75009420B9 /* EKEventHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EKEventHelper.swift; sourceTree = "<group>"; };
 		04FD56212352D6B5009420B9 /* Bundle+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+Extension.swift"; sourceTree = "<group>"; };
 		0718CCDE6143713203A9D7B8 /* Pods-EmployeeRosterTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmployeeRosterTests.release.xcconfig"; path = "Target Support Files/Pods-EmployeeRosterTests/Pods-EmployeeRosterTests.release.xcconfig"; sourceTree = "<group>"; };
 		4BF38923BD0CEC33E0435252 /* Pods-EmployeeRoster.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EmployeeRoster.debug.xcconfig"; path = "Target Support Files/Pods-EmployeeRoster/Pods-EmployeeRoster.debug.xcconfig"; sourceTree = "<group>"; };
@@ -409,6 +403,14 @@
 			path = EventKitManagerTests;
 			sourceTree = "<group>";
 		};
+		048FF23723A1D43A00FFE1AD /* EventKitUtility */ = {
+			isa = PBXGroup;
+			children = (
+				048FF23A23A1D43A00FFE1AD /* EventsModel.swift */,
+			);
+			path = EventKitUtility;
+			sourceTree = "<group>";
+		};
 		0493B41B2355BA2B001CC190 /* AlertControllerExtension */ = {
 			isa = PBXGroup;
 			children = (
@@ -468,21 +470,10 @@
 		04FD56002352AB75009420B9 /* EventKitManager */ = {
 			isa = PBXGroup;
 			children = (
+				048FF23723A1D43A00FFE1AD /* EventKitUtility */,
 				0402491023546B9800478C74 /* EventsCalendarManager */,
-				04FD56072352AB75009420B9 /* EventKitUtility */,
 			);
 			path = EventKitManager;
-			sourceTree = "<group>";
-		};
-		04FD56072352AB75009420B9 /* EventKitUtility */ = {
-			isa = PBXGroup;
-			children = (
-				04FD56082352AB75009420B9 /* EKEventHelperStatus.swift */,
-				04FD56092352AB75009420B9 /* EKEventHelper.swift */,
-				04FD56042352AB75009420B9 /* EventsModel.swift */,
-				04FD56022352AB75009420B9 /* EKEventError.swift */,
-			);
-			path = EventKitUtility;
 			sourceTree = "<group>";
 		};
 		315346FCC84884FD337D36C4 /* Frameworks */ = {
@@ -997,15 +988,13 @@
 				AFC3E6BC22CCB318005A8829 /* ScheduleModel.swift in Sources */,
 				AF1B099B22CC956D00C5EC90 /* EmployeeRoster.xcdatamodeld in Sources */,
 				0402492123546C4400478C74 /* String+Extension .swift in Sources */,
-				04FD560A2352AB75009420B9 /* EKEventError.swift in Sources */,
-				04FD560F2352AB75009420B9 /* EKEventHelperStatus.swift in Sources */,
 				0407F32A230841ED001E66A0 /* ColourExtension.swift in Sources */,
 				AF1B09C922CC987100C5EC90 /* WebServiceProtocol.swift in Sources */,
 				0402491423546B9800478C74 /* EventsCalendarManager.swift in Sources */,
-				04FD56102352AB75009420B9 /* EKEventHelper.swift in Sources */,
 				AFC3E6BA22CCB2F7005A8829 /* RosterModel.swift in Sources */,
 				04E71131234F53C1003BA780 /* ReusableView.swift in Sources */,
 				0402492023546C4400478C74 /* DateFormatter+Formatters.swift in Sources */,
+				048FF23E23A1D43A00FFE1AD /* EventsModel.swift in Sources */,
 				AFC3E6D522CCE700005A8829 /* UIImageViewExtension.swift in Sources */,
 				045480C423589143000D6BA7 /* SpinnerViewController.swift in Sources */,
 				0493B4212355BA2B001CC190 /* UIViewController+Extension.swift in Sources */,
@@ -1022,7 +1011,6 @@
 				0493B41F2355BA2B001CC190 /* UIAlertController+Extension.swift in Sources */,
 				04A073C5235148280042A062 /* KeychainManager.swift in Sources */,
 				0402766E2393753C00860D60 /* GeneratedJSONFiles.swift in Sources */,
-				04FD560C2352AB75009420B9 /* EventsModel.swift in Sources */,
 				AF1B099322CC956D00C5EC90 /* AppDelegate.swift in Sources */,
 				0448C9782349B36C0082369E /* RealmManager.swift in Sources */,
 				0402492223546C4400478C74 /* Date+Extensions.swift in Sources */,
