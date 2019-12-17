@@ -4,6 +4,9 @@ PODS:
   - CocoaLumberjack/Swift (3.6.0):
     - CocoaLumberjack/Core
   - Cuckoo (1.0.6)
+  - EventStoreHelperRx (0.2.0):
+    - RxCocoa (~> 5.0.1)
+    - RxSwift (~> 5.0.1)
   - KeychainAccess (4.1.0)
   - Nimble (8.0.4)
   - OHHTTPStubs/Core (8.0.0)
@@ -47,6 +50,7 @@ DEPENDENCIES:
   - Alamofire (~> 4.8.2)
   - CocoaLumberjack/Swift
   - Cuckoo (~> 1.0.6)
+  - EventStoreHelperRx (~> 0.2)
   - KeychainAccess
   - Nimble (~> 8)
   - OHHTTPStubs/Swift
@@ -65,6 +69,7 @@ SPEC REPOS:
     - Alamofire
     - CocoaLumberjack
     - Cuckoo
+    - EventStoreHelperRx
     - KeychainAccess
     - Nimble
     - OHHTTPStubs
@@ -84,6 +89,7 @@ SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
   CocoaLumberjack: 78b0c238666f4f58db069738ec176f4519557516
   Cuckoo: 8074fc309159c4862665b83798f5ad03e061e8bd
+  EventStoreHelperRx: 84eb5bd7aeeef0ee0cb43efbbd0d5fb2214b671a
   KeychainAccess: 445e28864fe6d3458b41fa211bcdc39890e8bd5a
   Nimble: 18d5360282923225d62b09d781f63abc1a0111fc
   OHHTTPStubs: 9cbce6364bec557cc3439aa6bb7514670d780881
@@ -99,6 +105,6 @@ SPEC CHECKSUMS:
   SwiftGen: f872ca75cbd17bf7103c17f13dcfa0d9a15667b0
   SwiftLint: 4105f061f9812b214568b736dab580ab2c73a582
 
-PODFILE CHECKSUM: 7233c4dac1d5df9dcd4026be99aabb081ca68f21
+PODFILE CHECKSUM: 47ca9dbd489d69174b48d5e3adc061053ec2faa7
 
 COCOAPODS: 1.8.4

@@ -9,6 +9,7 @@
 import Foundation
 import RxSwift
 import CocoaLumberjack
+import EventStoreHelperRx
 
 final class EmployeeViewModel: EmployeeViewModelProtocol {
     //input
