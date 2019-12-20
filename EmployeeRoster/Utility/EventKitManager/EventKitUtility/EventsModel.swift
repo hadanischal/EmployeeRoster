@@ -7,29 +7,21 @@
 //
 
 import Foundation
-
-struct EventsModel {
-    let title: String
-    let startDate: Date
-    let endDate: Date
-    let location: String?
-    let notes: String?
-    let alarmMinutesBefore: Int
-}
+import EventStoreHelperRx
 
 extension EventsModel {
-    init?(withRosterModel rosterModel: RosterModel) {
+     init?(withRosterModel rosterModel: RosterModel) {
         guard let name = rosterModel.name,
             let fromDate = rosterModel.fromDate?.yyyyMMddDate,
             let toDate = rosterModel.toDate?.yyyyMMddDate else {
                 return nil
         }
-        self.title = "\(name) on Roster"
-        self.startDate = fromDate
-        self.endDate = toDate
-        self.location = nil
-        self.notes = nil
-        self.alarmMinutesBefore = 30
+        self.init(title: "\(name) on Roster",
+            startDate: fromDate,
+            endDate: toDate,
+            location: nil,
+            notes: nil,
+            alarmMinutesBefore: 30)
     }
 }
 
@@ -40,12 +32,11 @@ extension EventsModel {
             let toDate = scheduleModel.toDate?.yyyyMMddDate else {
                 return nil
         }
-
-        self.title = "\(name) on Roster"
-        self.startDate = fromDate
-        self.endDate = toDate
-        self.location = nil
-        self.notes = nil
-        self.alarmMinutesBefore = 30
+        self.init(title: "\(name) on Roster",
+               startDate: fromDate,
+               endDate: toDate,
+               location: nil,
+               notes: nil,
+               alarmMinutesBefore: 30)
     }
 }
