@@ -20,5 +20,5 @@ ${PODS_ROOT}/Cuckoo/run generate --testable "${PROJECT_NAME}" \
 "$INPUT_DIR/Service/ApiHandler/GetEmployeeInfoHandlerProtocol.swift" \
 "$INPUT_DIR/Service/ApiHandler/GetEmployeeInfoHandler.swift" \
 "$INPUT_DIR/ViewModel/EmployeeViewModelProtocol.swift" \
-"$INPUT_DIR/ViewModel/EmployeeViewModel.swift" \
+"$INPUT_DIR/ViewModel/EmployeeListModel.swift" \
 # ... and so forth
