@@ -27,6 +27,8 @@
 		0407F32723084190001E66A0 /* GothamRounded-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0407F32423084190001E66A0 /* GothamRounded-Bold.otf */; };
 		0407F32823084190001E66A0 /* GothamRounded-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0407F32523084190001E66A0 /* GothamRounded-Light.otf */; };
 		0407F32A230841ED001E66A0 /* ColourExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0407F329230841ED001E66A0 /* ColourExtension.swift */; };
+		043D4D4423B71205008FFE6E /* EmployeeListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043D4D4323B71205008FFE6E /* EmployeeListModel.swift */; };
+		043D4D4823B77871008FFE6E /* EmployeeListModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043D4D4723B77871008FFE6E /* EmployeeListModelTests.swift */; };
 		0447E5C923A32E34009BAC51 /* MockEventsCalendarManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0447E5C823A32E34009BAC51 /* MockEventsCalendarManager.swift */; };
 		0448C9782349B36C0082369E /* RealmManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0448C9772349B36C0082369E /* RealmManager.swift */; };
 		045480C423589143000D6BA7 /* SpinnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 045480C323589143000D6BA7 /* SpinnerViewController.swift */; };
@@ -124,6 +126,8 @@
 		0407F32423084190001E66A0 /* GothamRounded-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GothamRounded-Bold.otf"; sourceTree = "<group>"; };
 		0407F32523084190001E66A0 /* GothamRounded-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "GothamRounded-Light.otf"; sourceTree = "<group>"; };
 		0407F329230841ED001E66A0 /* ColourExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColourExtension.swift; sourceTree = "<group>"; };
+		043D4D4323B71205008FFE6E /* EmployeeListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeListModel.swift; sourceTree = "<group>"; };
+		043D4D4723B77871008FFE6E /* EmployeeListModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmployeeListModelTests.swift; sourceTree = "<group>"; };
 		0447E5C823A32E34009BAC51 /* MockEventsCalendarManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockEventsCalendarManager.swift; sourceTree = "<group>"; };
 		0448C9772349B36C0082369E /* RealmManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmManager.swift; sourceTree = "<group>"; };
 		045480C323589143000D6BA7 /* SpinnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerViewController.swift; sourceTree = "<group>"; };
@@ -528,6 +532,7 @@
 				AF25A28822D3693E001183F9 /* MaterializedSequenceResult.swift */,
 				AFFD7BC622D1C2BB0075A006 /* GetEmployeeInfoHandlerTests.swift */,
 				045480C7235895E5000D6BA7 /* WebServiceTests.swift */,
+				043D4D4723B77871008FFE6E /* EmployeeListModelTests.swift */,
 				AF1A481022D4056900436A29 /* EmployeeViewModelTests.swift */,
 				04A073BE235082060042A062 /* RealmManagerTests.swift */,
 				04A073C62351483E0042A062 /* KeychainManagerTests.swift */,
@@ -576,6 +581,7 @@
 		AFC3E6AB22CCA3E7005A8829 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				043D4D4323B71205008FFE6E /* EmployeeListModel.swift */,
 				AFC3E6BF22CCBDD4005A8829 /* EmployeeViewModelProtocol.swift */,
 				AFC3E6B022CCA45A005A8829 /* EmployeeViewModel.swift */,
 			);
@@ -836,7 +842,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Define output file. Change \"${PROJECT_DIR}/${PROJECT_NAME}Tests\" to your test's root source folder, if it's not the default name.\nOUTPUT_FILE=\"${PROJECT_DIR}/${PROJECT_NAME}Tests/GeneratedMocks.swift\"\necho \"Generated Mocks File = ${OUTPUT_FILE}\"\n\n# Define input directory. Change \"${PROJECT_DIR}/${PROJECT_NAME}\" to your project's root source folder, if it's not the default name.\nINPUT_DIR=\"${PROJECT_DIR}/${PROJECT_NAME}\"\necho \"Mocks Input Directory = ${INPUT_DIR}\"\n\n# Generate mock files, include as many input files as you'd like to create mocks for.\n\"${PODS_ROOT}/Cuckoo/run\" generate --testable \"${PROJECT_NAME}\" \\\n--output \"${OUTPUT_FILE}\" \\\n\"$INPUT_DIR/Service/WebService/WebServiceProtocol.swift\" \\\n\"$INPUT_DIR/Service/ApiHandler/GetEmployeeInfoHandlerProtocol.swift\" \\\n\"$INPUT_DIR/ViewModel/EmployeeViewModelProtocol.swift\" \\\n\"$INPUT_DIR/Utility/RealmManager/RealmManager.swift\" \\\n\"$INPUT_DIR/Utility/KeychainManager/KeychainManager.swift\" \\\n\n# After running once, locate `GeneratedMocks.swift` and drag it into your Xcode test target group.\n";
+			shellScript = "# Define output file. Change \"${PROJECT_DIR}/${PROJECT_NAME}Tests\" to your test's root source folder, if it's not the default name.\nOUTPUT_FILE=\"${PROJECT_DIR}/${PROJECT_NAME}Tests/GeneratedMocks.swift\"\necho \"Generated Mocks File = ${OUTPUT_FILE}\"\n\n# Define input directory. Change \"${PROJECT_DIR}/${PROJECT_NAME}\" to your project's root source folder, if it's not the default name.\nINPUT_DIR=\"${PROJECT_DIR}/${PROJECT_NAME}\"\necho \"Mocks Input Directory = ${INPUT_DIR}\"\n\n# Generate mock files, include as many input files as you'd like to create mocks for.\n\"${PODS_ROOT}/Cuckoo/run\" generate --testable \"${PROJECT_NAME}\" \\\n--output \"${OUTPUT_FILE}\" \\\n\"$INPUT_DIR/Service/WebService/WebServiceProtocol.swift\" \\\n\"$INPUT_DIR/Service/ApiHandler/GetEmployeeInfoHandlerProtocol.swift\" \\\n\"$INPUT_DIR/ViewModel/EmployeeViewModelProtocol.swift\" \\\n\"$INPUT_DIR/Utility/RealmManager/RealmManager.swift\" \\\n\"$INPUT_DIR/Utility/KeychainManager/KeychainManager.swift\" \\\n\"$INPUT_DIR/ViewModel/EmployeeListModel.swift\" \\\n\n# After running once, locate `GeneratedMocks.swift` and drag it into your Xcode test target group.\n";
 		};
 		04E7112B234F5109003BA780 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -977,6 +983,7 @@
 				AFC3E6BA22CCB2F7005A8829 /* RosterModel.swift in Sources */,
 				04E71131234F53C1003BA780 /* ReusableView.swift in Sources */,
 				0402492023546C4400478C74 /* DateFormatter+Formatters.swift in Sources */,
+				043D4D4423B71205008FFE6E /* EmployeeListModel.swift in Sources */,
 				048FF23E23A1D43A00FFE1AD /* EventsModel.swift in Sources */,
 				AFC3E6D522CCE700005A8829 /* UIImageViewExtension.swift in Sources */,
 				045480C423589143000D6BA7 /* SpinnerViewController.swift in Sources */,
@@ -1021,6 +1028,7 @@
 				AFFD7BC722D1C2BB0075A006 /* GetEmployeeInfoHandlerTests.swift in Sources */,
 				AF1A481122D4056900436A29 /* EmployeeViewModelTests.swift in Sources */,
 				AF1B09AB22CC956E00C5EC90 /* EmployeeRosterTests.swift in Sources */,
+				043D4D4823B77871008FFE6E /* EmployeeListModelTests.swift in Sources */,
 				AFFD7BC522D1C2440075A006 /* GeneratedMocks.swift in Sources */,
 				04A073C72351483E0042A062 /* KeychainManagerTests.swift in Sources */,
 				048EB042235A79F400AFF8B0 /* MockEKEventStore.swift in Sources */,
