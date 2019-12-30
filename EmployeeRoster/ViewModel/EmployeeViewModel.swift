@@ -13,8 +13,7 @@ import EventStoreHelperRx
 
 final class EmployeeViewModel: EmployeeViewModelProtocol {
     //input
-    private let getEmployeeHandler: GetEmployeeInfoHandlerProtocol
-    private let realmManager: RealmManagerDataSource
+    private let employeeListModel: EmployeeListModelDataSource
     private let eventsCalendarManager: EventsCalendarManagerDataSource
 
     //output
@@ -30,12 +29,9 @@ final class EmployeeViewModel: EmployeeViewModelProtocol {
 
     private let disposeBag = DisposeBag()
 
-    init(withGetWeather getEmployeeHandler: GetEmployeeInfoHandlerProtocol = GetEmployeeInfoHandler(),
-         withRealmManager realmManager: RealmManagerDataSource = RealmManager(),
-         withEventsCalendarManager eventsCalendarManager: EventsCalendarManagerDataSource = EventsCalendarManager()
-    ) {
-        self.getEmployeeHandler = getEmployeeHandler
-        self.realmManager = realmManager
+    init(withEmployeeListModel employeeListModel: EmployeeListModelDataSource = EmployeeListModel(),
+         withEventsCalendarManager eventsCalendarManager: EventsCalendarManagerDataSource = EventsCalendarManager()) {
+        self.employeeListModel = employeeListModel
         self.eventsCalendarManager = eventsCalendarManager
 
         self.employeeResult = employeeResultSubject.asObserver()
@@ -48,43 +44,33 @@ final class EmployeeViewModel: EmployeeViewModelProtocol {
     private func reloadTask() {
         let scheduler = SerialDispatchQueueScheduler(qos: .default)
         Observable<Int>.interval(.seconds(500), scheduler: scheduler)
-            .subscribe { [weak self] _ in
-                self?.getRosterInfo()
-        }.disposed(by: disposeBag)
-    }
-
-    // Get employee roster from server
-    func getRosterInfo() {
-        self.getEmployeeHandler
-            .request()
-            .retry(3)
-            .map { [weak self] result -> EmployeeModel in
-                self?.employeeResultSubject.on(.next(result))
-                return result
+            .flatMap { [weak self] _ -> Observable<EmployeeModel> in
+                return self?.getRosterInfo() ?? Observable.empty()
         }
-        .flatMap { [weak self] result -> Completable in
-            return self?.realmManager.saveEmployeeInfo(withInfo: result) ?? Completable.empty()
-        }.subscribe(onNext: { _ in
-            DDLogInfo("onNext")
-        }, onError: { [weak self] error in
-            DDLogError("onError: \(error)")
-            self?.errorResultSubject.on(.next(error))
-
-            }, onCompleted: {
-                DDLogInfo("onCompleted")
-
+        .subscribe(onNext: { [employeeResultSubject] result in
+            employeeResultSubject.onNext(result)
+            }, onError: { [errorResultSubject] (error) in
+                errorResultSubject.on(.next(error))
         }).disposed(by: disposeBag)
     }
 
-    // Get employee roster from DB
-    func getRosterInfoFromDB() {
-        realmManager
-            .fetchEmployeeInfo()
-            .subscribe(onSuccess: { [weak self] result in
-                self?.employeeResultSubject.on(.next(result))
-                }, onError: { error in
-                    DDLogError("fetch from DB error : \(error)")
+    func viewDidLoad() {
+        self.updateRosterInfo()
+    }
+
+    // Get employee roster from server
+    func updateRosterInfo() {
+        self.getRosterInfo()
+            .subscribe(onNext: { [employeeResultSubject] result in
+                employeeResultSubject.onNext(result)
+                }, onError: { [errorResultSubject] (error) in
+                    errorResultSubject.on(.next(error))
             }).disposed(by: disposeBag)
+    }
+
+    // Get employee roster Info From model
+    private func getRosterInfo() -> Observable<EmployeeModel> {
+        return self.employeeListModel.getRosterInfo()
     }
 
     // Check Calendar permissions auth status
