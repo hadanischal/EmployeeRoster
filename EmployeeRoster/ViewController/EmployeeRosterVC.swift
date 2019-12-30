@@ -83,11 +83,10 @@ final class EmployeeRosterVC: UIViewController {
 
         buttonRefresh.rx.tap
             .subscribe(onNext: { [weak self] _ in
-                self?.viewModel.getRosterInfo()
+                self?.viewModel.viewDidLoad()
             }).disposed(by: disposeBag)
 
-        viewModel.getRosterInfoFromDB()
-        viewModel.getRosterInfo()
+        viewModel.viewDidLoad()
     }
 
     private func openSettingsAppURL() {

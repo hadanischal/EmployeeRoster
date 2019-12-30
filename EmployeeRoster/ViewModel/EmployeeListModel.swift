@@ -49,6 +49,7 @@ final class EmployeeListModel: EmployeeListModelDataSource {
             .catchError { _ in Observable.empty() }
     }
 
+    //save EmployeeInfo to DB
     private func saveEmployeeInfo(withInfo data: EmployeeModel) -> Completable {
         return self.realmManager.saveEmployeeInfo(withInfo: data)
             .catchError { _ in Completable.empty()}

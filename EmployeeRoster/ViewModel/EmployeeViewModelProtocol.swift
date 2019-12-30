@@ -14,7 +14,6 @@ protocol EmployeeViewModelProtocol {
     var openSettings: Observable<(String, String)> { get }
     var eventAddedToCalendar: Observable<(String, String)> { get }
 
-    func getRosterInfo()
-    func getRosterInfoFromDB()
+    func viewDidLoad()
     func addEventToCalendar(withRosterModel rosterModel: RosterModel)
 }
