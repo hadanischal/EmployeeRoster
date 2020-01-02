@@ -16,9 +16,10 @@ echo "Mocks Input Directory = $INPUT_DIR"
 ${PODS_ROOT}/Cuckoo/run generate --testable "${PROJECT_NAME}" \
 --output "${OUTPUT_FILE}" \
 "$INPUT_DIR/Service/WebService/WebServiceProtocol.swift" \
-"$INPUT_DIR/Service/WebService/WebService.swift" \
 "$INPUT_DIR/Service/ApiHandler/GetEmployeeInfoHandlerProtocol.swift" \
-"$INPUT_DIR/Service/ApiHandler/GetEmployeeInfoHandler.swift" \
 "$INPUT_DIR/ViewModel/EmployeeViewModelProtocol.swift" \
+"$INPUT_DIR/Utility/RealmManager/RealmManager.swift" \
+"$INPUT_DIR/Utility/KeychainManager/KeychainManager.swift" \
 "$INPUT_DIR/ViewModel/EmployeeListModel.swift" \
+
 # ... and so forth

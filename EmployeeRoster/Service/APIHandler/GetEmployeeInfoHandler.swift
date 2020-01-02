@@ -9,7 +9,7 @@
 import Foundation
 import RxSwift
 
-class GetEmployeeInfoHandler: GetEmployeeInfoHandlerProtocol {
+final class GetEmployeeInfoHandler: GetEmployeeInfoHandlerProtocol {
     private let webService: WebServiceProtocol
     private let disposeBag = DisposeBag()
     private let url = "http://support-moray-eel.herokuapp.com/roster"

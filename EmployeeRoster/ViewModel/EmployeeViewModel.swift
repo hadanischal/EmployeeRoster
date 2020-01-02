@@ -11,6 +11,12 @@ import RxSwift
 import CocoaLumberjack
 import EventStoreHelperRx
 
+enum AddEventRoute {
+    case eventAdded(String, String)
+    case openSettings(String, String)
+    case errorResult(Error)
+}
+
 final class EmployeeViewModel: EmployeeViewModelProtocol {
     //input
     private let employeeListModel: EmployeeListModelDataSource
@@ -19,13 +25,9 @@ final class EmployeeViewModel: EmployeeViewModelProtocol {
     //output
     var employeeResult: Observable<EmployeeModel>
     var errorResult: Observable<Error>
-    var openSettings: Observable<(String, String)>
-    var eventAddedToCalendar: Observable<(String, String)>
 
     private let employeeResultSubject = PublishSubject<EmployeeModel>()
     private let errorResultSubject = PublishSubject<Error>()
-    private let openSettingsSubject = PublishSubject<(String, String)>()
-    private let eventAddedToCalendarSubject = PublishSubject<(String, String)>()
 
     private let disposeBag = DisposeBag()
 
@@ -36,8 +38,6 @@ final class EmployeeViewModel: EmployeeViewModelProtocol {
 
         self.employeeResult = employeeResultSubject.asObserver()
         self.errorResult = errorResultSubject.asObserver()
-        self.openSettings = openSettingsSubject.asObserver()
-        self.eventAddedToCalendar = eventAddedToCalendarSubject.asObserver()
         self.reloadTask()
     }
 
@@ -75,33 +75,32 @@ final class EmployeeViewModel: EmployeeViewModelProtocol {
 
     // Check Calendar permissions auth status
     // Try to add an event to the calendar if authorized
+    func addEventToCalendar(withRosterModel rosterModel: RosterModel) -> Observable<AddEventRoute> {
 
-    func addEventToCalendar(withRosterModel rosterModel: RosterModel) {
+        guard let event = EventsModel(withRosterModel: rosterModel) else { return Observable.empty() }
 
-        guard let event = EventsModel(withRosterModel: rosterModel) else {
-            return
-        }
-
-        self.eventsCalendarManager
+        return self.eventsCalendarManager
             .addEventToCalendar(event: event)
-//            .presentCalendarModalToAddEvent(event: event)
-            .subscribe(onCompleted: { [weak self] in
-                DDLogInfo("eventsCalendarManager onCompleted")
-                let result = ("Event added to Calendar", "Event added to Calendar completed")
-                self?.eventAddedToCalendarSubject.onNext(result)
+            //            .presentCalendarModalToAddEvent(event: event)
+            .asObservable()
+            .catchError({ (error) -> Observable<EventsCalendarStatus> in
+                return Observable.just(EventsCalendarStatus.error(error as? EKEventError ?? EKEventError.eventNotAddedToCalendar))
+            })
+            .flatMap({ calendarStatus -> Observable<AddEventRoute> in
+                switch calendarStatus {
+                case .added:
+                    let result = ("Event added to Calendar", "Event added to Calendar completed")
+                    return Observable.just(AddEventRoute.eventAdded(result.0, result.1))
 
-            }, onError: { [weak self] error in
-                DDLogError("eventsCalendarManager error : \(error)")
-
-                if error as? EKEventError == .calendarAccessDeniedOrRestricted {
+                case .denied:
                     let appName = Bundle.main.displayName ?? "This app"
                     let result = ("This feature requires calender access", "In iPhone settings, tap \(appName) and turn on calender access")
-                    self?.openSettingsSubject.onNext(result)
-                } else {
-                    self?.errorResultSubject.onNext(error)
+                    return Observable.just(AddEventRoute.openSettings(result.0, result.1))
+
+                case .error(let error):
+                    return Observable.just(AddEventRoute.errorResult(error))
                 }
             })
-            .disposed(by: disposeBag)
     }
 
 }

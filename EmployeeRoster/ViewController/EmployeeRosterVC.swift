@@ -59,26 +59,7 @@ final class EmployeeRosterVC: UIViewController {
             .errorResult
             .observeOn(MainScheduler.instance)
             .subscribe(onNext: { [weak self] error in
-                self?.showAlertView(withTitle: error.localizedDescription, andMessage: (error as? EKEventError)?.recoverySuggestion)
-            }).disposed(by: disposeBag)
-
-        viewModel
-            .openSettings
-            .observeOn(MainScheduler.instance)
-            .flatMap({ [weak self] result -> Observable<Int> in
-                return self?.alertCalenderAccessNeeded(result.0, result.1) ?? Observable.empty()
-            })
-            .subscribe(onNext: { [weak self] index in
-                index == 0 ? self?.openSettingsAppURL() : ()
-                self?.dismiss(animated: true)
-            }).disposed(by: disposeBag)
-
-        viewModel
-            .eventAddedToCalendar
-            .observeOn(MainScheduler.instance)
-            .subscribe(onNext: { [weak self] result in
-                let (title, message) = result
-                self?.showAlertView(withTitle: title, andMessage: message)
+                self?.showAlertView(withTitle: error.localizedDescription, andMessage: error.localizedDescription)
             }).disposed(by: disposeBag)
 
         buttonRefresh.rx.tap
@@ -89,17 +70,50 @@ final class EmployeeRosterVC: UIViewController {
         viewModel.viewDidLoad()
     }
 
+    private func addEventToCalendar(withRosterModel dataModel: RosterModel) {
+        viewModel
+            .addEventToCalendar(withRosterModel: dataModel)
+            .observeOn(MainScheduler.instance)
+            .subscribe(onNext: { [weak self] eventRoute in
+                self?.eventAddedRoute(withRoute: eventRoute)
+                }, onError: { error in
+                    print("addEventToCalendar VC error", error)
+            }).disposed(by: disposeBag)
+
+    }
+
+    func eventAddedRoute(withRoute eventRoute: AddEventRoute) {
+        switch eventRoute {
+        case .eventAdded(let title, let message):
+            self.showAlertView(withTitle: title, andMessage: message)
+
+        case .openSettings(let title, let message):
+            self.alertCalenderAccessNeeded(title, message)
+
+        case .errorResult(let error):
+            self.showAlertView(withTitle: error.localizedDescription, andMessage: (error as? EKEventError)?.recoverySuggestion)
+        }
+    }
+
     private func openSettingsAppURL() {
         let settingsAppURL = URL(string: UIApplication.openSettingsURLString)!
         UIApplication.shared.open(settingsAppURL)
     }
 
-    private func alertCalenderAccessNeeded(_ title: String, _ message: String) -> Observable<Int> {
-        return self.alert(title: title,
-                          message: message,
-            actions: [AlertAction(title: "Settings", type: 0, style: .default),
-                      AlertAction(title: "Cancel", type: 1, style: .destructive)],
-            viewController: self)
+    private func alertCalenderAccessNeeded(_ title: String, _ message: String) {
+
+        let alert = UIAlertController(title: title,
+                                      message: message,
+            preferredStyle: UIAlertController.Style.alert)
+
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let settingsAction = UIAlertAction(title: "Settings", style: .default) { [weak self] (_: UIAlertAction) in
+            self?.openSettingsAppURL()
+        }
+
+        alert.addAction(cancelAction)
+        alert.addAction(settingsAction)
+        self.present(alert, animated: true, completion: nil)
     }
 }
 
@@ -154,6 +168,6 @@ extension EmployeeRosterVC: UITableViewDataSource, UITableViewDelegate {
             return
         }
         let dataValue = roster[indexPath.row]
-        viewModel.addEventToCalendar(withRosterModel: dataValue)
+        self.addEventToCalendar(withRosterModel: dataValue)
     }
 }
