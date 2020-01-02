@@ -11,9 +11,6 @@ import RxSwift
 protocol EmployeeViewModelProtocol {
     var employeeResult: Observable<EmployeeModel> { get }
     var errorResult: Observable<Error> { get }
-    var openSettings: Observable<(String, String)> { get }
-    var eventAddedToCalendar: Observable<(String, String)> { get }
-
     func viewDidLoad()
-    func addEventToCalendar(withRosterModel rosterModel: RosterModel)
+    func addEventToCalendar(withRosterModel rosterModel: RosterModel) -> Observable<AddEventRoute>
 }
