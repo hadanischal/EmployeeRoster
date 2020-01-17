@@ -8,7 +8,6 @@
 
 import Foundation
 import RxSwift
-import CocoaLumberjack
 
 protocol EmployeeListModelDataSource {
     func getRosterInfo() -> Observable<EmployeeModel>
