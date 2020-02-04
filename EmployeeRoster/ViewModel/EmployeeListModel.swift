@@ -43,7 +43,7 @@ final class EmployeeListModel: EmployeeListModelDataSource {
     }
 
     // Get employee roster from DB
-    func getEmployeeInfoFromLocalDb() -> Observable<EmployeeModel> {
+    private func getEmployeeInfoFromLocalDb() -> Observable<EmployeeModel> {
         realmManager.fetchEmployeeInfo().asObservable()
             .catchError { _ in Observable.empty() }
     }

@@ -82,7 +82,7 @@ final class EmployeeRosterVC: UIViewController {
 
     }
 
-    func eventAddedRoute(withRoute eventRoute: AddEventRoute) {
+    private func eventAddedRoute(withRoute eventRoute: AddEventRoute) {
         switch eventRoute {
         case .eventAdded(let title, let message):
             self.showAlertView(withTitle: title, andMessage: message)
