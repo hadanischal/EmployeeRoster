@@ -34,9 +34,9 @@ class WebServiceTests: QuickSpec {
                 context("when server request succeed ", {
                     var result: MaterializedSequenceResult<Data>?
                     beforeEach {
-                        stub(condition: isPath(url)) { (request) -> OHHTTPStubsResponse in
+                        stub(condition: isPath(url)) { request -> HTTPStubsResponse in
                             expect(request.httpMethod) == "GET"
-                            return OHHTTPStubsResponse(data: mockData!,
+                            return HTTPStubsResponse(data: mockData!,
                                                        statusCode: 201,
                                                        headers: ["Content-Type": "application/json"])
                         }
@@ -50,9 +50,9 @@ class WebServiceTests: QuickSpec {
                 context("when server request failed ", {
                     var result: MaterializedSequenceResult<Data>?
                     beforeEach {
-                        stub(condition: isPath(url)) { (request) -> OHHTTPStubsResponse in
+                        stub(condition: isPath(url)) { request -> HTTPStubsResponse in
                             expect(request.httpMethod) == "GET"
-                            return OHHTTPStubsResponse(data: Data(),
+                            return HTTPStubsResponse(data: Data(),
                                                        statusCode: 400,
                                                        headers: ["Content-Type": "application/json"])
                         }
