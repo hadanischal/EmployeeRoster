@@ -1,33 +1,33 @@
 PODS:
   - Alamofire (4.8.2)
-  - CocoaLumberjack/Core (3.6.0)
-  - CocoaLumberjack/Swift (3.6.0):
+  - CocoaLumberjack/Core (3.6.1)
+  - CocoaLumberjack/Swift (3.6.1):
     - CocoaLumberjack/Core
   - Cuckoo (1.0.6)
   - EventStoreHelperRx (0.3.0):
     - RxCocoa (~> 5.0.1)
     - RxSwift (~> 5.0.1)
   - KeychainAccess (4.1.0)
-  - Nimble (8.0.4)
-  - OHHTTPStubs/Core (8.0.0)
-  - OHHTTPStubs/Default (8.0.0):
+  - Nimble (8.0.7)
+  - OHHTTPStubs/Core (9.0.0)
+  - OHHTTPStubs/Default (9.0.0):
     - OHHTTPStubs/Core
     - OHHTTPStubs/JSON
     - OHHTTPStubs/NSURLSession
     - OHHTTPStubs/OHPathHelpers
-  - OHHTTPStubs/JSON (8.0.0):
+  - OHHTTPStubs/JSON (9.0.0):
     - OHHTTPStubs/Core
-  - OHHTTPStubs/NSURLSession (8.0.0):
+  - OHHTTPStubs/NSURLSession (9.0.0):
     - OHHTTPStubs/Core
-  - OHHTTPStubs/OHPathHelpers (8.0.0)
-  - OHHTTPStubs/Swift (8.0.0):
+  - OHHTTPStubs/OHPathHelpers (9.0.0)
+  - OHHTTPStubs/Swift (9.0.0):
     - OHHTTPStubs/Default
   - Quick (2.1.0)
-  - Realm (4.1.1):
-    - Realm/Headers (= 4.1.1)
-  - Realm/Headers (4.1.1)
-  - RealmSwift (4.1.1):
-    - Realm (= 4.1.1)
+  - Realm (4.4.0):
+    - Realm/Headers (= 4.4.0)
+  - Realm/Headers (4.4.0)
+  - RealmSwift (4.4.0):
+    - Realm (= 4.4.0)
   - RxAlamofire (5.1.0):
     - RxAlamofire/Core (= 5.1.0)
   - RxAlamofire/Core (5.1.0):
@@ -38,13 +38,13 @@ PODS:
   - RxCocoa (5.0.1):
     - RxRelay (~> 5)
     - RxSwift (~> 5)
-  - RxRelay (5.0.1):
+  - RxRelay (5.1.1):
     - RxSwift (~> 5)
   - RxSwift (5.0.1)
   - RxTest (5.0.1):
     - RxSwift (~> 5)
   - SwiftGen (6.1.0)
-  - SwiftLint (0.38.0)
+  - SwiftLint (0.39.2)
 
 DEPENDENCIES:
   - Alamofire (~> 4.8.2)
@@ -87,24 +87,24 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
-  CocoaLumberjack: 78b0c238666f4f58db069738ec176f4519557516
+  CocoaLumberjack: b17ae15142558d08bbacf69775fa10c4abbebcc9
   Cuckoo: 8074fc309159c4862665b83798f5ad03e061e8bd
   EventStoreHelperRx: a586e6bd7f838bc88dabc53d4733d53f8e1f8552
   KeychainAccess: 445e28864fe6d3458b41fa211bcdc39890e8bd5a
-  Nimble: 18d5360282923225d62b09d781f63abc1a0111fc
-  OHHTTPStubs: 9cbce6364bec557cc3439aa6bb7514670d780881
+  Nimble: a73af6ecd4c9106f434f3d55fc54570be3739e0b
+  OHHTTPStubs: cb29d2a9d09a828ecb93349a2b0c64f99e0db89f
   Quick: 4be43f6634acfa727dd106bdf3929ce125ffa79d
-  Realm: 25f0a8244cbb1c2271c922963ea8666fc2d8104d
-  RealmSwift: 9e2657b33764f80e4a4dffd6d440e24715782052
+  Realm: e125f464884cda953ebefe70c671b75b03b81b9b
+  RealmSwift: 33656a42bd300959a081fc13347376bc478071af
   RxAlamofire: a2d7621de4c23a0c6e7b476b504acc32838ee341
   RxBlocking: c5e090f42d046df8b0e7752742510f349963710f
   RxCocoa: e741b9749968e8a143e2b787f1dfbff2b63d0a5c
-  RxRelay: 89d54507f4fd4d969e6ec1d4bd7f3673640b4640
+  RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: e2dc62b366a3adf6a0be44ba9f405efd4c94e0c4
   RxTest: 0132f952a61da82d5233abedaa559df91e5330e5
   SwiftGen: f872ca75cbd17bf7103c17f13dcfa0d9a15667b0
-  SwiftLint: 4105f061f9812b214568b736dab580ab2c73a582
+  SwiftLint: 22ccbbe3b8008684be5955693bab135e0ed6a447
 
 PODFILE CHECKSUM: 50210ea67b3d9bae930863732d6c53152a4281a8
 
-COCOAPODS: 1.8.4
+COCOAPODS: 1.9.1
