@@ -84,6 +84,7 @@
 		AFC3E6D022CCDF34005A8829 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = AFC3E6CF22CCDF34005A8829 /* .swiftlint.yml */; };
 		AFC3E6D222CCE0FD005A8829 /* EmployeeDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC3E6D122CCE0FD005A8829 /* EmployeeDetailCell.swift */; };
 		AFC3E6D522CCE700005A8829 /* UIImageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFC3E6D422CCE700005A8829 /* UIImageViewExtension.swift */; };
+		AFF42B86244552C1004AAA73 /* bitrise.yml in Resources */ = {isa = PBXBuildFile; fileRef = AFF42B85244552C0004AAA73 /* bitrise.yml */; };
 		AFFD7BC522D1C2440075A006 /* GeneratedMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFD7BC422D1C2440075A006 /* GeneratedMocks.swift */; };
 		AFFD7BC722D1C2BB0075A006 /* GetEmployeeInfoHandlerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFFD7BC622D1C2BB0075A006 /* GetEmployeeInfoHandlerTests.swift */; };
 /* End PBXBuildFile section */
@@ -194,6 +195,7 @@
 		AFC3E6CF22CCDF34005A8829 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text; path = .swiftlint.yml; sourceTree = "<group>"; };
 		AFC3E6D122CCE0FD005A8829 /* EmployeeDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeDetailCell.swift; sourceTree = "<group>"; };
 		AFC3E6D422CCE700005A8829 /* UIImageViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtension.swift; sourceTree = "<group>"; };
+		AFF42B85244552C0004AAA73 /* bitrise.yml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.yaml; path = bitrise.yml; sourceTree = "<group>"; };
 		AFFD7BC322D1C1940075A006 /* Cuckoo-GeneratedMocks.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = "Cuckoo-GeneratedMocks.sh"; sourceTree = "<group>"; };
 		AFFD7BC422D1C2440075A006 /* GeneratedMocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeneratedMocks.swift; sourceTree = "<group>"; };
 		AFFD7BC622D1C2BB0075A006 /* GetEmployeeInfoHandlerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetEmployeeInfoHandlerTests.swift; sourceTree = "<group>"; };
@@ -641,6 +643,7 @@
 		AFFD7BC222D1C1760075A006 /* BuildScripts */ = {
 			isa = PBXGroup;
 			children = (
+				AFF42B85244552C0004AAA73 /* bitrise.yml */,
 				04027652239374EA00860D60 /* generate-swiftgen.sh */,
 				04027653239374EA00860D60 /* swiftgen.yml */,
 				AFC3E6CF22CCDF34005A8829 /* .swiftlint.yml */,
@@ -777,6 +780,7 @@
 				0407F32623084190001E66A0 /* GothamRounded-Medium.otf in Resources */,
 				AFC3E6D022CCDF34005A8829 /* .swiftlint.yml in Resources */,
 				0407F32723084190001E66A0 /* GothamRounded-Bold.otf in Resources */,
+				AFF42B86244552C1004AAA73 /* bitrise.yml in Resources */,
 				04027675239376DF00860D60 /* StandardColors.txt in Resources */,
 				0407F32823084190001E66A0 /* GothamRounded-Light.otf in Resources */,
 				04027654239374EA00860D60 /* generate-swiftgen.sh in Resources */,

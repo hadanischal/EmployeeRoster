@@ -13,8 +13,8 @@ import CocoaLumberjack
 import EventStoreHelperRx
 
 final class EmployeeRosterVC: UIViewController {
-    @IBOutlet weak var tableView: UITableView?
 
+    @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var buttonRefresh: UIBarButtonItem!
     private var viewModel: EmployeeViewModelProtocol!
     private var employeeList: EmployeeModel?
@@ -163,11 +163,7 @@ extension EmployeeRosterVC: UITableViewDataSource, UITableViewDelegate {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        DDLogInfo("tapped")
-        guard let roster = self.employeeList?.roster else {
-            return
-        }
-        let dataValue = roster[indexPath.row]
-        self.addEventToCalendar(withRosterModel: dataValue)
+        guard let roster = self.employeeList?.roster else { return }
+        self.addEventToCalendar(withRosterModel: roster[indexPath.row])
     }
 }

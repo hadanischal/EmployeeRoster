@@ -19,7 +19,7 @@ protocol RealmManagerDataSource {
 struct RealmManager: RealmManagerDataSource {
     private var queueScheduler: SchedulerType!
 
-    init(withQueueScheduler queueScheduler: SchedulerType = ConcurrentDispatchQueueScheduler(qos: DispatchQoS.default)) {
+    init(withQueueScheduler queueScheduler: SchedulerType = ConcurrentDispatchQueueScheduler(qos: DispatchQoS.background)) {
         self.queueScheduler = queueScheduler
     }
 
@@ -63,7 +63,7 @@ struct RealmManager: RealmManagerDataSource {
                 completable(.error(error))
                 return Disposables.create {}
             }
-        }
+    }.subscribeOn(ConcurrentDispatchQueueScheduler(qos: DispatchQoS.default))
     }
 
     /// get employee info from DB
@@ -104,6 +104,6 @@ struct RealmManager: RealmManagerDataSource {
                 completable(.error(error))
                 return Disposables.create {}
             }
-        }
+            }.subscribeOn(ConcurrentDispatchQueueScheduler(qos: DispatchQoS.background))
     }
 }
