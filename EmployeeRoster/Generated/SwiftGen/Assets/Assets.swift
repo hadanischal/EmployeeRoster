@@ -23,6 +23,7 @@ internal enum Asset {
     internal static let placeholder = ImageAsset(name: "placeholder")
   }
   internal enum Icons {
+    internal static let settings = ImageAsset(name: "settings")
   }
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name

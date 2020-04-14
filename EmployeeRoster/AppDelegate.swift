@@ -26,7 +26,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
      */
     private func setupLoggers() {
         DDLog.add(DDOSLogger.sharedInstance) // Uses os_log
-        DDLog.add(DDTTYLogger.sharedInstance)
         
         let fileLogger: DDFileLogger = DDFileLogger() // File Logger
         fileLogger.rollingFrequency = 60 * 60 * 24 // 24 hours
