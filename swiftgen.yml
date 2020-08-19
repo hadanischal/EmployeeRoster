@@ -1,0 +1,50 @@
+#run 'swiftgen' in app project (WORKSPACE/App) and it will update the UIColors.swift file
+#Update colors using StandardColors.txt
+
+xcassets:
+  inputs:
+    - ./EmployeeRoster/Resources/
+  outputs:
+    - templateName: swift4
+      output: ./EmployeeRoster/Generated/SwiftGen/Assets/Assets.swift
+
+fonts:
+  inputs:
+    - ./EmployeeRoster/Resources/Fonts
+  outputs:
+    - templateName: swift4
+      output: ./EmployeeRoster/Generated/SwiftGen/Fonts/GeneratedFonts.swift
+      
+ib:
+  inputs:
+    - ./EmployeeRoster/Base.lproj/LaunchScreen.storyboard
+    - ./EmployeeRoster/Base.lproj/Main.storyboard
+
+  outputs:
+    - templateName: scenes-swift4
+      output: ./EmployeeRoster/Generated/SwiftGen/Storyboards/StoryboardScenes.swift
+    - templateName: segues-swift4
+      output: ./EmployeeRoster/Generated/SwiftGen/Storyboards/StoryboardSegues.swift
+      
+colors:
+  inputs:
+    - ./EmployeeRoster/Resources/Colors/StandardColors.txt
+  outputs:
+    templateName: swift4
+    output: ./EmployeeRoster/Generated/SwiftGen/Colors/GeneratedColors.swift
+    
+    
+strings:
+  inputs:
+    - ./EmployeeRoster/Resources/Strings/
+  outputs:
+    - templateName: structured-swift4
+      output: ./EmployeeRoster/Generated/SwiftGen/Strings/GeneratedStrings.swift
+
+json:
+  inputs:
+    - ./EmployeeRoster/Resources/JsonFile/
+    - ./EmployeeRosterTests/MockResources/employee.json
+  outputs:
+    - templateName: runtime-swift4
+      output: ./EmployeeRoster/Generated/SwiftGen/JSONFiles/GeneratedJSONFiles.swift
