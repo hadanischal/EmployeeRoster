@@ -6,11 +6,10 @@
 //  Copyright © 2019 NischalHada. All rights reserved.
 //
 
-import XCTest
 @testable import EmployeeRoster
+import XCTest
 
 class EmployeeRosterTests: XCTestCase {
-
     override func setUp() {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
@@ -30,5 +29,4 @@ class EmployeeRosterTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
-
 }
