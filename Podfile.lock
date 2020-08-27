@@ -10,7 +10,6 @@ PODS:
   - Kingfisher (5.13.4):
     - Kingfisher/Core (= 5.13.4)
   - Kingfisher/Core (5.13.4)
-  - NewPopMenu (2.1.2)
   - Nimble (8.1.1)
   - OHHTTPStubs/Core (9.0.0)
   - OHHTTPStubs/Default (9.0.0):
@@ -33,11 +32,6 @@ PODS:
   - Realm/Headers (4.4.0)
   - RealmSwift (4.4.0):
     - Realm (= 4.4.0)
-  - RxAlamofire (5.1.0):
-    - RxAlamofire/Core (= 5.1.0)
-  - RxAlamofire/Core (5.1.0):
-    - Alamofire (~> 4.8)
-    - RxSwift (~> 5.0)
   - RxBlocking (5.1.1):
     - RxSwift (~> 5)
   - RxCocoa (5.1.1):
@@ -58,14 +52,12 @@ DEPENDENCIES:
   - Cuckoo (~> 1.3.2)
   - KeychainAccess
   - Kingfisher (~> 5.13.4)
-  - NewPopMenu
   - Nimble (~> 8.1.1)
   - OHHTTPStubs/Swift
   - Pecker (~> 0.4.0)
   - PKHUD (~> 5.0)
   - Quick (~> 3.0.0)
   - RealmSwift
-  - RxAlamofire
   - RxBlocking (~> 5.1.1)
   - RxCocoa (~> 5.1.1)
   - RxSwift (~> 5.1.1)
@@ -81,7 +73,6 @@ SPEC REPOS:
     - Cuckoo
     - KeychainAccess
     - Kingfisher
-    - NewPopMenu
     - Nimble
     - OHHTTPStubs
     - Pecker
@@ -89,7 +80,6 @@ SPEC REPOS:
     - Quick
     - Realm
     - RealmSwift
-    - RxAlamofire
     - RxBlocking
     - RxCocoa
     - RxRelay
@@ -105,7 +95,6 @@ SPEC CHECKSUMS:
   Cuckoo: 57f71c6616b6b08cd9fe27f803da056fb619ff3e
   KeychainAccess: 445e28864fe6d3458b41fa211bcdc39890e8bd5a
   Kingfisher: d2279a7abece3c7f25a80cd2b7f363ca5cf3f44c
-  NewPopMenu: c6129e08e8192f6257ceb5f9a4357e1b59c6e2e7
   Nimble: 5f8a2fb6fa343a7242dfdd9d42f7267419d464b2
   OHHTTPStubs: cb29d2a9d09a828ecb93349a2b0c64f99e0db89f
   Pecker: 5025913055924d4d6c786935e4ba7dc241d36359
@@ -113,7 +102,6 @@ SPEC CHECKSUMS:
   Quick: 6d9559f40647bc4d510103842ef2fdd882d753e2
   Realm: e125f464884cda953ebefe70c671b75b03b81b9b
   RealmSwift: 33656a42bd300959a081fc13347376bc478071af
-  RxAlamofire: a2d7621de4c23a0c6e7b476b504acc32838ee341
   RxBlocking: 5f700a78cad61ce253ebd37c9a39b5ccc76477b4
   RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
@@ -123,6 +111,6 @@ SPEC CHECKSUMS:
   SwiftGen: f872ca75cbd17bf7103c17f13dcfa0d9a15667b0
   SwiftLint: 22ccbbe3b8008684be5955693bab135e0ed6a447
 
-PODFILE CHECKSUM: d099f2febe7d3c4c4a286260762a2bd600e2bec1
+PODFILE CHECKSUM: b5540a86b939534a5baec0c54be740b955d7fe4f
 
 COCOAPODS: 1.9.1

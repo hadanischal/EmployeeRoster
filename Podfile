@@ -7,7 +7,6 @@ target 'EmployeeRoster' do
   
   # Pods for EmployeeRoster
   pod 'Alamofire', '~> 4.8.2'
-  pod 'RxAlamofire'
   pod 'RealmSwift'
   pod 'KeychainAccess'
   pod 'CocoaLumberjack/Swift'
@@ -19,7 +18,6 @@ target 'EmployeeRoster' do
   pod 'SwiftLint'
   pod 'Segmentio'
   pod 'CocoaLumberjack/Swift'
-  pod 'NewPopMenu'
   pod 'SwiftGen', '~> 6.0'
   pod 'Pecker', '~> 0.4.0'
   pod 'PKHUD', '~> 5.0'
