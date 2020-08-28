@@ -1,7 +1,7 @@
 #!/bin/sh
 
 #  generate-swiftgen.sh
-#  OpenJobs
+#  EmployeeRoster
 #
 #  Created by Nischal Hada on 25/11/19.
 #  Copyright © 2019 Nischal Hada. All rights reserved.
