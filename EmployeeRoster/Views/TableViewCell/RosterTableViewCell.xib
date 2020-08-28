@@ -21,7 +21,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="386" height="132"/>
                     </imageView>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Y77-Ex-tne">
-                        <rect key="frame" x="10" y="48" width="366" height="84"/>
+                        <rect key="frame" x="10" y="38" width="366" height="84"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xsQ-tM-OBH">
                                 <rect key="frame" x="0.0" y="0.0" width="366" height="28"/>
@@ -58,7 +58,7 @@
                     <constraint firstItem="Y77-Ex-tne" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="Ku9-do-dhK"/>
                     <constraint firstAttribute="trailing" secondItem="BZg-Cb-kAp" secondAttribute="trailing" id="XPp-bQ-rVv"/>
                     <constraint firstItem="BZg-Cb-kAp" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="ZK4-Zl-8bB"/>
-                    <constraint firstAttribute="bottom" secondItem="Y77-Ex-tne" secondAttribute="bottom" id="s7x-6x-d8t"/>
+                    <constraint firstAttribute="bottom" secondItem="Y77-Ex-tne" secondAttribute="bottom" constant="10" id="s7x-6x-d8t"/>
                     <constraint firstAttribute="bottom" secondItem="BZg-Cb-kAp" secondAttribute="bottom" id="sKL-wH-v9i"/>
                     <constraint firstAttribute="trailing" secondItem="Y77-Ex-tne" secondAttribute="trailing" constant="10" id="xWt-kb-kcy"/>
                 </constraints>
