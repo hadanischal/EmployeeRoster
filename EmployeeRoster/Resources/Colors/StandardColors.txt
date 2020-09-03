@@ -1,0 +1,14 @@
+primary              : #4D98DE
+tableViewBGColor     : #EEEEEE
+viewBGColor          : #EEF0F1
+
+barTintColor         : #4D98DE
+titleTintColor       : #FFFFFF
+shadowColor          : #000000
+
+neon100              : #01FFFF
+redEnergy100         : #D0021B
+strikingYellow100    : #FFF572
+
+shadeMagenta         : #EAE8EA
+coral                : #F46F60
