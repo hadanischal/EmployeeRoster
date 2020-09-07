@@ -24,7 +24,6 @@ PODS:
   - OHHTTPStubs/OHPathHelpers (9.0.0)
   - OHHTTPStubs/Swift (9.0.0):
     - OHHTTPStubs/Default
-  - Pecker (0.4.0)
   - PKHUD (5.3.0)
   - Quick (3.0.0)
   - Realm (4.4.0):
@@ -42,7 +41,6 @@ PODS:
   - RxSwift (5.1.1)
   - RxTest (5.1.1):
     - RxSwift (~> 5)
-  - Segmentio (4.1)
   - SwiftGen (6.1.0)
   - SwiftLint (0.39.2)
 
@@ -54,7 +52,6 @@ DEPENDENCIES:
   - Kingfisher (~> 5.13.4)
   - Nimble (~> 8.1.1)
   - OHHTTPStubs/Swift
-  - Pecker (~> 0.4.0)
   - PKHUD (~> 5.0)
   - Quick (~> 3.0.0)
   - RealmSwift
@@ -62,7 +59,6 @@ DEPENDENCIES:
   - RxCocoa (~> 5.1.1)
   - RxSwift (~> 5.1.1)
   - RxTest (~> 5.1.1)
-  - Segmentio
   - SwiftGen (~> 6.0)
   - SwiftLint
 
@@ -75,7 +71,6 @@ SPEC REPOS:
     - Kingfisher
     - Nimble
     - OHHTTPStubs
-    - Pecker
     - PKHUD
     - Quick
     - Realm
@@ -85,7 +80,6 @@ SPEC REPOS:
     - RxRelay
     - RxSwift
     - RxTest
-    - Segmentio
     - SwiftGen
     - SwiftLint
 
@@ -97,7 +91,6 @@ SPEC CHECKSUMS:
   Kingfisher: d2279a7abece3c7f25a80cd2b7f363ca5cf3f44c
   Nimble: 5f8a2fb6fa343a7242dfdd9d42f7267419d464b2
   OHHTTPStubs: cb29d2a9d09a828ecb93349a2b0c64f99e0db89f
-  Pecker: 5025913055924d4d6c786935e4ba7dc241d36359
   PKHUD: 98f3e4bc904b9c916f1c5bb6d765365b5357291b
   Quick: 6d9559f40647bc4d510103842ef2fdd882d753e2
   Realm: e125f464884cda953ebefe70c671b75b03b81b9b
@@ -107,10 +100,9 @@ SPEC CHECKSUMS:
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
   RxTest: 711632d5644dffbeb62c936a521b5b008a1e1faa
-  Segmentio: ab29def64e1bff6e6e9b97671788a99bed3f1d9f
   SwiftGen: f872ca75cbd17bf7103c17f13dcfa0d9a15667b0
   SwiftLint: 22ccbbe3b8008684be5955693bab135e0ed6a447
 
-PODFILE CHECKSUM: b5540a86b939534a5baec0c54be740b955d7fe4f
+PODFILE CHECKSUM: 9af0b2b3e8dca3bae847dbadbdefa91e7160dccb
 
 COCOAPODS: 1.9.1

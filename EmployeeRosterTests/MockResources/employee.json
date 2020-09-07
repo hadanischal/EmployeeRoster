@@ -1,31 +1,26 @@
 {
-    "tenant": "moroku",
+    "tenant": "Nischal",
     "scheduled_today": {
-        "name": "Nischal",
-        "from_date": "2019-07-08",
-        "to_date": "2019-07-14"
+        "name": "Charlotte",
+        "from_date": "2020-08-31",
+        "to_date": "2020-09-06"
     },
-    "roster": [
-        {
-            "name": "Nischal",
-            "from_date": "2019-07-08",
-            "to_date": "2019-07-14"
-        },
-        {
-            "name": "Bennie",
-            "from_date": "2019-07-15",
-            "to_date": "2019-07-21"
-        },
-        {
-            "name": "Soumya",
-            "from_date": "2019-07-22",
-            "to_date": "2019-07-28"
-        },
-        {
-            "name": "Evan",
-            "from_date": "2019-07-29",
-            "to_date": "2019-08-04"
-        }
-    ],
+    "roster": [{
+        "name": "Charlotte",
+        "from_date": "2020-08-31",
+        "to_date": "2020-09-06"
+    }, {
+        "name": "Ava",
+        "from_date": "2020-09-07",
+        "to_date": "2020-09-13"
+    }, {
+        "name": "Mia",
+        "from_date": "2020-09-14",
+        "to_date": "2020-09-20"
+    }, {
+        "name": "Harper",
+        "from_date": "2020-09-21",
+        "to_date": "2020-09-27"
+    }],
     "motd": "Have a great day!"
 }

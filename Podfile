@@ -9,19 +9,14 @@ target 'EmployeeRoster' do
   pod 'Alamofire', '~> 4.8.2'
   pod 'RealmSwift'
   pod 'KeychainAccess'
-  pod 'CocoaLumberjack/Swift'
   pod 'OHHTTPStubs/Swift'
-
   pod 'RxSwift', '~> 5.1.1'
   pod 'RxCocoa', '~> 5.1.1'
   pod 'Kingfisher', '~> 5.13.4'
   pod 'SwiftLint'
-  pod 'Segmentio'
   pod 'CocoaLumberjack/Swift'
   pod 'SwiftGen', '~> 6.0'
-  pod 'Pecker', '~> 0.4.0'
   pod 'PKHUD', '~> 5.0'
-
 
   target 'EmployeeRosterTests' do
     inherit! :search_paths

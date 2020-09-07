@@ -41,5 +41,19 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+    <key>NSAppTransportSecurity</key>
+    <dict>
+        <key>NSAllowsArbitraryLoads</key>
+        <true/>
+    </dict>
+
+    <key>UIAppFonts</key>
+    <array>
+        <string>GothamRounded-Bold.otf</string>
+        <string>GothamRounded-Medium.otf</string>
+        <string>GothamRounded-Light.otf</string>
+    </array>
+    <key>NSCalendarsUsageDescription</key>
+    <string>This app need to access your calendar events</string>
 </dict>
 </plist>
