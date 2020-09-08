@@ -702,6 +702,7 @@
 				AF1B098D22CC956D00C5EC90 /* Resources */,
 				DDAB17EA30DC81C81851DE2B /* [CP] Embed Pods Frameworks */,
 				046009E9232678B100493059 /* Run Swiftlint Script */,
+				AFE37F072507AA8600E1558A /* SwiftGen Script */,
 			);
 			buildRules = (
 			);
@@ -933,7 +934,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Define output file. Change \"${PROJECT_DIR}/${PROJECT_NAME}Tests\" to your test's root source folder, if it's not the default name.\nOUTPUT_FILE=\"${PROJECT_DIR}/${PROJECT_NAME}Tests/GeneratedMocks.swift\"\necho \"Generated Mocks File = ${OUTPUT_FILE}\"\n\n# Define input directory. Change \"${PROJECT_DIR}/${PROJECT_NAME}\" to your project's root source folder, if it's not the default name.\nINPUT_DIR=\"${PROJECT_DIR}/${PROJECT_NAME}\"\necho \"Mocks Input Directory = ${INPUT_DIR}\"\n\n# Generate mock files, include as many input files as you'd like to create mocks for.\n\"${PODS_ROOT}/Cuckoo/run\" generate --testable \"${PROJECT_NAME}\" \\\n--output \"${OUTPUT_FILE}\" \\\n\"$INPUT_DIR/NetworkLayer/Core/WebService.swift\" \\\n\"$INPUT_DIR/NetworkLayer/Services/EmployeeNetworkHandler.swift\" \\\n\"$INPUT_DIR/Repository/EmployeeListRepository.swift\" \\\n\"$INPUT_DIR/Utility/RealmManager/RealmManager.swift\" \\\n\"$INPUT_DIR/Utility/KeychainHandler/KeychainHandler.swift\" \\\n";
+			shellScript = "$SRCROOT/Cuckoo-GeneratedMocks.sh\n";
+		};
+		AFE37F072507AA8600E1558A /* SwiftGen Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "SwiftGen Script";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ -f \"${PODS_ROOT}/SwiftGen/bin/swiftgen\" ]]; then\n  \"${PODS_ROOT}/SwiftGen/bin/swiftgen\"\nelse\n  echo \"warning: SwiftGen is not installed. Run 'pod install --repo-update' to install it.\"\nfi\n\n";
 		};
 		BB82F1FA1C0991ADEA84B261 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
